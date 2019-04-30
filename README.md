@@ -19,3 +19,9 @@ Tutorial for Topological Data Analysis with the Gudhi Library
 
 
 5 - Machine learning and Deep learning for persistence
+
+
+6- Alternative filtration and robust TDA
+
+
+7- Topological Data Analysis and Time series
