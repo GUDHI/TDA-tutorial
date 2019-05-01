@@ -5,8 +5,11 @@ Topological Data Analysis (tda) is a recent and fast growing  eld providing a se
 
 See for instance [this paper](https://arxiv.org/abs/1710.04019) for an introduction TDA for data sciences
 
+### 0 - Install Python Gudhi Library  
 
-1 - Simplex trees and simpicial complexes
+See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installation.html) or [conda install](https://anaconda.org/conda-forge/gudhi)
+
+### 1 - Simplex trees and simpicial complexes
 
 
 2 - Persitence homology and metrics
