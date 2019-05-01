@@ -12,6 +12,11 @@ See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installat
 
 ### 1 - Simplex trees and simpicial complexes
 
+Simplicial complexes can be seen as higher dimensional generalization of graphs. They are mathematical objects that are both topological and combinatorial, a property making them particularly useful for TDA.
+
+In Gudhi, (filtered) simplicial complexes are encoded through a data structure called simplex tree. This [notebook](./Tuto-GUDHI-simplex-Trees.ipynb) illustrates the use of simplex tree to represent simplicial complexes.
+
+
 
 2 - Persitence homology and metrics
 
