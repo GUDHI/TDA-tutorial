@@ -29,3 +29,9 @@ See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installat
 
 
 7- Topological Data Analysis and Time series
+
+
+8- Mapper Algorithm
+
+
+9- TDA and dimension reduction
