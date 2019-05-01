@@ -20,25 +20,28 @@ The next [notebook](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb) pres
 
 It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distances : see this [notebook](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb).
 
+The last [notebook]() of this section is about cubical complexes, which are filtered complexes defined on grids.
+
+
 2 - Persitence homology and metrics
 
 
-3 - alternative representation of persistence and linearization
+3 - Alternative representations of persistence and linearization
 
 
 4 - Statistical tools for persistence
 
 
-5 - Machine learning and Deep learning for persistence
+5 - Machine learning and deep learning for persistence
 
 
-6- Alternative filtration and robust TDA
+6- Alternative filtrations and robust TDA
 
 
-7- Topological Data Analysis and Time series
+7- Topological Data Analysis for Time series
 
 
-8- Mapper Algorithm
+8- Cover complexes and the Mapper Algorithm 
 
 
 9- TDA and dimension reduction
