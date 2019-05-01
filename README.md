@@ -1,7 +1,8 @@
 
 # Tutorial for Topological Data Analysis with the Gudhi Library
 
-Topological Data Analysis (tda) is a recent and fast growing  eld providing a set of new topological and geometric tools to infer relevant features for possibly complex data. This paper is a brief introduction, through a few selected topics, to basic fundamental and practical aspects of tda for non experts.
+Topological Data Analysis (TDA) is a recent and fast growing  field providing a set of new topological and geometric tools to infer relevant features for possibly complex data. Here we propose a set of notebooks for the practice of TDA with the python Gudhi library together with popular machine learning and data sciences libraries.
+
 
 See for instance [this paper](https://arxiv.org/abs/1710.04019) for an introduction TDA for data sciences
 
