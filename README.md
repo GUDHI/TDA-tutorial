@@ -14,9 +14,11 @@ See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installat
 
 Simplicial complexes can be seen as higher dimensional generalization of graphs. They are mathematical objects that are both topological and combinatorial, a property making them particularly useful for TDA.
 
-In Gudhi, (filtered) simplicial complexes are encoded through a data structure called simplex tree. This [notebook](./Tuto-GUDHI-simplex-Trees.ipynb) illustrates the use of simplex tree to represent simplicial complexes.
+In Gudhi, (filtered) simplicial complexes are encoded through a data structure called simplex tree. This [notebook](Tuto-GUDHI-simplex-Trees.ipynb) illustrates the use of simplex tree to represent simplicial complexes.
 
+The next [notebook](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb) presents how to build Rips complexes and alpha complexes (represented as simplex trees) from data points in $\mathbb R^d$. 
 
+It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distances : see this [notebook](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb).
 
 2 - Persitence homology and metrics
 
