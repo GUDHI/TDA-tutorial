@@ -1,9 +1,9 @@
 
+# Tutorial for Topological Data Analysis with the Gudhi Library
 
+Topological Data Analysis (tda) is a recent and fast growing  eld providing a set of new topological and geometric tools to infer relevant features for possibly complex data. This paper is a brief introduction, through a few selected topics, to basic fundamental and practical aspects of tda for non experts.
 
-# TDA-tutorials
-
-Tutorial for Topological Data Analysis with the Gudhi Library
+See for instance [this paper](https://arxiv.org/abs/1710.04019) for an introduction TDA for data sciences
 
 
 1 - Simplex trees and simpicial complexes
