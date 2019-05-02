@@ -26,7 +26,7 @@ We first propose a [notebook](Tuto-GUDHI-simplex-Trees.ipynb) for illustrating t
 
 In practice the first step of the "TDA pipeline analysis" is to define a filtration of simplicial complexes for some data. This [notebook](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb) explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $ R^d $,using the simplex tree data structure.
 
-It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distances. We also give a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix. See this [notebook](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb). 
+It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distance, see this [notebook](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb). We also give in this last notebook a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix.
 
 The last [notebook]() of this section is about cubical complexes, which are filtered complexes defined on grids.
 
