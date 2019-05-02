@@ -10,7 +10,9 @@ See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installat
 
 ### 1 - Simplex trees and simpicial complexes
 
-A [simplicial complex](https://en.wikipedia.org/wiki/Simplicial_complex) is a set of [simplices](https://en.wikipedia.org/wiki/Simplex), they can be seen as higher dimensional generalization of graphs. They are mathematical objects that are both topological and combinatorial, a property making them particularly useful for TDA. Here is an exemple of simplicial complex :
+Starting from a point cloud in $R^d$ or in a general metric space, TDA typically aims at extracting topological signatures from the point cloud. By studying the topological of the point clouds, we actually mean studying the topology of unions of balls centered at the point cloud (offsets). However, non-discrete sets such as offsets, and also continuous mathematical shapes like curves, surfaces and more generally manifolds, cannot easily be encoded as finite discrete structures. [Simplicial complexes](https://en.wikipedia.org/wiki/Simplicial_complex) are therefore used in computational geometry to approximate such shapes.
+
+A simplicial complex] is a set of [simplices](https://en.wikipedia.org/wiki/Simplex), they can be seen as higher dimensional generalization of graphs. They are mathematical objects that are both topological and combinatorial, a property making them particularly useful for TDA. Here is an exemple of simplicial complex :
 
 ![CSexemple](Images/Pers14.PNG)
  
