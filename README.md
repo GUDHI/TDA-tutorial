@@ -16,7 +16,7 @@ A simplicial complex is a set of [simplices](https://en.wikipedia.org/wiki/Simpl
 
 ![title](Images/Pers14.PNG)
  
-A filtration is a increasing sequence of sub-complexes of a simplicial complex $K$, it can be seen as ordering the simplices included in the complex $K$. Indeed, simpicial complexes often come with a specific order, as for [Vietoris-Rips complexes](https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex), [Cech complexes](https://en.wikipedia.org/wiki/%C4%8Cech_complex) and [alpha complexes](https://en.wikipedia.org/wiki/Alpha_shape#Alpha_complex). 
+A filtration is a increasing sequence of sub-complexes of a simplicial complex K, it can be seen as ordering the simplices included in the complex K. Indeed, simpicial complexes often come with a specific order, as for [Vietoris-Rips complexes](https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex), [Cech complexes](https://en.wikipedia.org/wiki/%C4%8Cech_complex) and [alpha complexes](https://en.wikipedia.org/wiki/Alpha_shape#Alpha_complex). 
 
 In Gudhi, filtered simplicial complexes are encoded through a data structure called simplex tree. The vertices are represented by integers, the edges by couple of integers etc.
 ![CSexemple](http://gudhi.gforge.inria.fr/python/latest/_images/Simplex_tree_representation.png)
@@ -24,9 +24,9 @@ In Gudhi, filtered simplicial complexes are encoded through a data structure cal
 
 We first propose a [notebook](Tuto-GUDHI-simplex-Trees.ipynb) for illustrating the use of simplex trees to represent simplicial complexes.
 
-The first thing we have to do is to define a filtration of simplicial complexes for some data. This [notebook](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb) presents how to build Rips complexes and alpha complexes (represented as simplex trees) from data points in $ R^d $,using the simplex tree data structure.
+In practice the first step of the "TDA pipeline analysis" is to define a filtration of simplicial complexes for some data. This [notebook](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb) explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $ R^d $,using the simplex tree data structure.
 
-It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distances. We also propose a way to define alpha complexes from matrix of pairwise distances by first applying a multidimensional scaling transform on the matrix. See this [notebook](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb). 
+It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distances. We also give a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix. See this [notebook](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb). 
 
 The last [notebook]() of this section is about cubical complexes, which are filtered complexes defined on grids.
 
