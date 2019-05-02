@@ -23,9 +23,9 @@ In Gudhi, filtered simplicial complexes are encoded through a data structure cal
 ![CSexemple](http://gudhi.gforge.inria.fr/python/latest/_images/Simplex_tree_representation.png)
 
 
-This [notebook](Tuto-GUDHI-simplex-Trees.ipynb) illustrates the use of simplex tree to represent simplicial complexes.
+We first propose a [notebook](Tuto-GUDHI-simplex-Trees.ipynb) for illustrating the use of simplex trees to represent simplicial complexes.
 
-The next [notebook](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb) presents how to build Rips complexes and alpha complexes (represented as simplex trees) from data points in $ R^d $. 
+Next, a [notebook](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb) presents how to build Rips complexes and alpha complexes (represented as simplex trees) from data points in $ R^d $. 
 
 It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distances : see this [notebook](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb).
 
