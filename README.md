@@ -6,7 +6,7 @@ See for instance [this paper](https://arxiv.org/abs/1710.04019) for an introduct
 
 ### 0 - Install Python Gudhi Library  
 
-See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installation.html) or [conda install](https://anaconda.org/conda-forge/gudhi)
+See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installation.html) or if you have conda you can make a [conda install](https://anaconda.org/conda-forge/gudhi).
 
 ### 1 - Simplex trees and simpicial complexes
 
