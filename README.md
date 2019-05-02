@@ -10,19 +10,18 @@ See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installat
 
 ### 1 - Simplex trees and simpicial complexes
 
-A simplicial complex is a set of simplices, they can be seen as higher dimensional generalization of graphs. They are mathematical objects that are both topological and combinatorial, a property making them particularly useful for TDA. 
+A [simplicial complex](https://en.wikipedia.org/wiki/Simplicial_complex) is a set of [simplices](https://en.wikipedia.org/wiki/Simplex), they can be seen as higher dimensional generalization of graphs. They are mathematical objects that are both topological and combinatorial, a property making them particularly useful for TDA. Here is an exemple of simplicial complex :
 
-
-
+![CSexemple](Images/Pers14.PNG)
  
+ A Filtration is a increasing sequence of sub-complexes of a simplicial complex $K$, it can be seen as ordering the simplices included in the complex. Indeed, simpicial complexes often come with a specific order, as for [Vietoris-Rips complexes](https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex), [Cech complexes](https://en.wikipedia.org/wiki/%C4%8Cech_complex) and [alpha complexes](https://en.wikipedia.org/wiki/Alpha_shape#Alpha_complex). 
 
 
+In Gudhi, (filtered) simplicial complexes are encoded through a data structure called simplex tree. The vertices are represented by integers, the edges by couple of integers etc.
+![CSexemple](http://gudhi.gforge.inria.fr/python/latest/_images/Simplex_tree_representation.png)
 
 
-
-
-
-In Gudhi, (filtered) simplicial complexes are encoded through a data structure called simplex tree. This [notebook](Tuto-GUDHI-simplex-Trees.ipynb) illustrates the use of simplex tree to represent simplicial complexes.
+This [notebook](Tuto-GUDHI-simplex-Trees.ipynb) illustrates the use of simplex tree to represent simplicial complexes.
 
 The next [notebook](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb) presents how to build Rips complexes and alpha complexes (represented as simplex trees) from data points in $ R^d $. 
 
