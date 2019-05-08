@@ -37,7 +37,7 @@ TDA signatures can extracted from point clouds but in many cases in data science
 
 Above is an example for a function defined on a subset of $R$ but in general the function f is defined on a subset of $R^d$. 
 
-[Notebook: cubical complexes](Tuto-GUDHI-cubical-complexes.ipynb).  One first approach for studying the topology of the sublevel sets of a function is to define a regular grid on $R^d$ and then to define a filtered complex based on this grid by taking as a filter the function f.
+[Notebook: cubical complexes](Tuto-GUDHI-cubical-complexes.ipynb).  One first approach for studying the topology of the sublevel sets of a function is to define a regular grid on $R^d$ and then to define a filtered complex based on this grid and the function f.
  
 
 
