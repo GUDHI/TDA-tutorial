@@ -14,9 +14,9 @@ See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installat
 
 ### 1 - Simplex trees and simpicial complexes
 
-TDA typically aims at extracting topological signatures from a point cloud in $\mathbb R^d$ or in a general metric space. By studying the topology of a point cloud, we actually mean studying the topology of the unions of balls centered at the point cloud, also called offsets. However, non-discrete sets such as offsets, and also continuous mathematical shapes like curves, surfaces and more generally manifolds, cannot easily be encoded as finite discrete structures. [Simplicial complexes](https://en.wikipedia.org/wiki/Simplicial_complex) are therefore used in computational geometry to approximate such shapes.
+TDA typically aims at extracting topological signatures from a point cloud in $\mathbb R^d$ or in a general metric space. By studying the topology of a point cloud, we actually mean studying the topology of the unions of balls centered at the point cloud, also called offsets. However, non-discrete sets such as offsets, and also continuous mathematical shapes like curves, surfaces and more generally manifolds, cannot easily be encoded as finite discrete structures. [Simplicial complexes](https://en.wikipedia.org/wiki/Simplicial_complex) are therefore used in computational geometry to approximate such shapes. 
 
-A simplicial complex is a set of [simplices](https://en.wikipedia.org/wiki/Simplex), they can be seen as higher dimensional generalization of graphs. They are mathematical objects that are both topological and combinatorial, a property making them particularly useful for TDA. Below is an exemple of simplicial complex:
+A simplicial complex is a set of [simplices](https://en.wikipedia.org/wiki/Simplex), they can be seen as higher dimensional generalization of graphs. They are mathematical objects that are both topological and combinatorial, a property making them particularly useful for TDA. The challenge here is to define such structures that are proven to reflect relevant information about the structure of data and that can be effectively constructed and manipulated in practice. Below is an exemple of simplicial complex:
 
 ![title](Images/Pers14.PNG)
  
@@ -28,7 +28,7 @@ A filtration is a increasing sequence of sub-complexes of a simplicial complex K
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipyn). In practice the first step of the "TDA pipeline analysis" is to define a filtration of simplicial complexes for some data. This  notebook explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $R^d$,using the simplex tree data structure.
 
-[Notebook: Rips and alpha complexes from pairwise distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb). It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distance, see this . We also give in this last notebook a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix.
+[Notebook: Rips and alpha complexes from pairwise distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb). It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distance. The definition of the metric on the data is usually given as an input or guided by the application. It is however important to notice that the choice of the metric may be critical to reveal interesting topological and geometric features of the data.We also give in this last notebook a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix.
 
 
 TDA signatures can extracted from point clouds but in many cases in data sciences the question is to study the topology of the sublevel sets of a function. 
@@ -41,12 +41,20 @@ Above is an example for a function defined on a subset of $R$ but in general the
  
 
 
-todo : filtration defined on the top of a cs using an extra function
-
 
 
 ### 2 - Persistence homology and metrics
 
+Homology is a classical concept in algebraic topology providing a powerful tool to formalize and handle the notion of topological features of a topological space or of a simplicial complex in an algebraic way. For any dimension k, the k-dimensional "holes" are represented by a vector space Hk whose dimension is intuitively the number of such independent features. For example the 0-dimensional homology group H0 represents the connected compo- nents of the complex, the 1-dimensional homology group H1 represents the 1-dimensional loops, the 2-dimensional homology group H2 represents the 2-dimensional cavities...
+
+Persistent homology is a powerful tool to compute, study and encode efficiently multiscale topological features of nested families of simplicial complexes and topological spaces. It encodes the evolution of the homology groups of the nested complexes across the scales.
+
+Persistent homology is a powerful tool to compute, study and encode efficiently multiscale topological features of nested families of simplicial complexes and topological spaces. It encodes the evolution of the homology groups of the nested complexes across the scales. The diagram below shows several level sets of the filtration.
+
+![title](Images/pers.png)    
+    
+    
+[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb)
 
 ### 3 - Alternative representations of persistence and linearization
 
@@ -58,6 +66,9 @@ todo : filtration defined on the top of a cs using an extra function
 
 
 ### 6- Alternative filtrations and robust TDA
+
+
+todo : filtration defined on the top of a cs using an extra function
 
 
 ### 7- Topological Data Analysis for Time series
