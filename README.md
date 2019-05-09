@@ -53,8 +53,8 @@ Persistent homology is a powerful tool to compute, study and encode efficiently 
 
 ![title](Images/pers.png)    
     
-    
-[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb)
+
+[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb) In this notebook we show how to compute barcodes and persistence diagram from a filtration.
 
 ### 3 - Alternative representations of persistence and linearization
 
