@@ -1,12 +1,9 @@
-
 # Tutorial for Topological Data Analysis with the Gudhi Library
 
 Topological Data Analysis (TDA) is a recent and fast growing  field providing a set of new topological and geometric tools to infer relevant features for possibly complex data. Here we propose a set of notebooks for the practice of TDA with the python Gudhi library together with popular machine learning and data sciences libraries.
 See for instance [this paper](https://arxiv.org/abs/1710.04019) for an introduction to TDA for data sciences.
 
 The complete list of notebooks can also be found at the end of this page.
-
-
 
 ### 0 - Install Python Gudhi Library  
 
@@ -43,9 +40,9 @@ Above is an example for a function defined on a subset of $R$ but in general the
 
 
 
-### 2 - Persistence homology and metrics
+### 2 - Persistence homology and persistence diagrams
 
-Homology is a classical concept in algebraic topology providing a powerful tool to formalize and handle the notion of topological features of a topological space or of a simplicial complex in an algebraic way. For any dimension k, the k-dimensional "holes" are represented by a vector space Hk whose dimension is intuitively the number of such independent features. For example the 0-dimensional homology group H0 represents the connected compo- nents of the complex, the 1-dimensional homology group H1 represents the 1-dimensional loops, the 2-dimensional homology group H2 represents the 2-dimensional cavities...
+Homology is a classical concept in algebraic topology providing a powerful tool to formalize and handle the notion of topological features of a topological space or of a simplicial complex in an algebraic way. For any dimension k, the k-dimensional "holes" are represented by a vector space Hk whose dimension is intuitively the number of such independent features. For example the 0-dimensional homology group H0 represents the connected components of the complex, the 1-dimensional homology group H1 represents the 1-dimensional loops, the 2-dimensional homology group H2 represents the 2-dimensional cavities...
 
 Persistent homology is a powerful tool to compute, study and encode efficiently multiscale topological features of nested families of simplicial complexes and topological spaces. It encodes the evolution of the homology groups of the nested complexes across the scales.
 
@@ -54,7 +51,8 @@ Persistent homology is a powerful tool to compute, study and encode efficiently 
 ![title](Images/pers.png)    
     
 
-[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb) In this notebook we show how to compute barcodes and persistence diagram from a filtration.
+[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb) In this notebook we show how to compute barcodes and persistence diagram from a filtration defined on the Protein binding dataset. This tutorial also introduces the bottleneck distance between persistence diagrams. 
+
 
 ### 3 - Alternative representations of persistence and linearization
 
@@ -91,3 +89,6 @@ todo : filtration defined on the top of a cs using an extra function
 
 [Cubical complexes](Tuto-GUDHI-cubical-complexes.ipynb)
 
+[Persistence diagrams and bottleneck distance](Tuto-GUDHI-persistence-diagrams.ipynb)
+
+contact : bertrand michel 
