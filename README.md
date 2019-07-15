@@ -65,8 +65,7 @@ For many applications of persistent homology, we observe topological features cl
 
 ### 6- Alternative filtrations and robust TDA
 
-
-todo : filtration defined on the top of a cs using an extra function
+This  [notebook](Tuto-GUDHI-DTM-filtrations.ipynb)  introduces the distance to measure (DTM) filtration, as defined in [this paper](https://arxiv.org/abs/1811.04757). This filtration can be used for robust TDA.
 
 
 ### 7- Topological Data Analysis for Time series
