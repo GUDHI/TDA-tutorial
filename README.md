@@ -23,7 +23,7 @@ A filtration is a increasing sequence of sub-complexes of a simplicial complex K
 ![CSexemple](http://gudhi.gforge.inria.fr/python/latest/_images/Simplex_tree_representation.png)
 
 
-[Notebook: Vietoris-Rips complexes and alpha complexes from data points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipyn). In practice the first step of the "TDA pipeline analysis" is to define a filtration of simplicial complexes for some data. This  notebook explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $R^d$,using the simplex tree data structure.
+[Notebook: Vietoris-Rips complexes and alpha complexes from data points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb). In practice the first step of the "TDA pipeline analysis" is to define a filtration of simplicial complexes for some data. This  notebook explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $R^d$,using the simplex tree data structure.
 
 [Notebook: Rips and alpha complexes from pairwise distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb). It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distance. The definition of the metric on the data is usually given as an input or guided by the application. It is however important to notice that the choice of the metric may be critical to reveal interesting topological and geometric features of the data.We also give in this last notebook a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix.
 
