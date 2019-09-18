@@ -12,6 +12,7 @@ RUN conda install --yes --freeze-installed -c conda-forge \
     scikit-learn \
     gudhi \
     jupyter \
+    git \
     && conda clean -afy \
     && find /opt/conda/ -follow -type f -name '*.a' -delete      \
     && find /opt/conda/ -follow -type f -name '*.pyc' -delete    \
