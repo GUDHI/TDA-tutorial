@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Convert and executes all notebooks
           command: |
-            for f in *.ipynb; do echo "Processing $f file.."; jupyter nbconvert --to notebook --inplace --execute $f;done;
+            for f in *.ipynb; do echo "Processing $f file.."; time jupyter nbconvert --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $f;done;
             
 workflows:
   version: 2
