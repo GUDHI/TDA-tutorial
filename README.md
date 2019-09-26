@@ -73,7 +73,7 @@ In this notebook we show how to compute barcodes and persistence diagram from a 
 For many applications of persistent homology, we observe topological features close to the diagonal. Since they correspond to topological structures that die very soon after they appear in the filtration, these points are generally considered as "topological noise". Confidence regions for persistence diagram provide a rigorous framework to this idea. This [notebook](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.html)
 ([download](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb))
 introduces the subsampling approach of [Fasy etal. 2014 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729). An alternative method is the bottleneck bootstrap method introduced in [Chazal etal. 2018](http://www.jmlr.org/papers/v18/15-484.html) and presented in this [notebook](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.html)
-([download](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)).
+([download](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb)).
 
 ### 5 - Machine learning and deep learning for persistence
 
@@ -113,10 +113,17 @@ introduces the distance to measure (DTM) filtration, as defined in [this paper](
 [Persistence diagrams and bottleneck distance](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-persistence-diagrams.html)
 ([download](Tuto-GUDHI-persistence-diagrams.ipynb))
 
+[Confidence regions for persistence diagrams : data points](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.html)
+([download](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb))
+
+[Confidence regions for persistence diagrams : bottleneck bootstrap](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.html)
+([download](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb))
+
 [Distance-to-measure filtrations](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-DTM-filtrations.html)
 ([download](Tuto-GUDHI-DTM-filtrations.ipynb))
 
 [k-power-distance-to-measure and k-power-likelihood-to-measure filtrations](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-kPDTM-kPLM.html)
 ([download](Tuto-GUDHI-kPDTM-kPLM.ipynb))
 
+/home/vincent/workspace/gudhi/notebooks/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb
 contact : bertrand michel 
