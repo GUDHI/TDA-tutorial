@@ -21,13 +21,13 @@ A simplicial complex is a set of [simplices](https://en.wikipedia.org/wiki/Simpl
  
 A filtration is a increasing sequence of sub-complexes of a simplicial complex K, it can be seen as ordering the simplices included in the complex K. Indeed, simpicial complexes often come with a specific order, as for [Vietoris-Rips complexes](https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex), [Cech complexes](https://en.wikipedia.org/wiki/%C4%8Cech_complex) and [alpha complexes](https://en.wikipedia.org/wiki/Alpha_shape#Alpha_complex). 
 
-[Notebook: Simplex trees](Tuto-GUDHI-simplex-Trees.html). In Gudhi, filtered simplicial complexes are encoded through a data structure called simplex tree. The vertices are represented by integers, the edges by couple of integers etc.
+[Notebook: Simplex trees]({{ site.github.url }}/Tuto-GUDHI-simplex-Trees.html). In Gudhi, filtered simplicial complexes are encoded through a data structure called simplex tree. The vertices are represented by integers, the edges by couple of integers etc.
 ![CSexemple](http://gudhi.gforge.inria.fr/python/latest/_images/Simplex_tree_representation.png)
 
 
-[Notebook: Vietoris-Rips complexes and alpha complexes from data points](Tuto-GUDHI-simplicial-complexes-from-data-points.html). In practice the first step of the "TDA pipeline analysis" is to define a filtration of simplicial complexes for some data. This  notebook explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $R^d$,using the simplex tree data structure.
+[Notebook: Vietoris-Rips complexes and alpha complexes from data points]({{ site.github.url }}/Tuto-GUDHI-simplicial-complexes-from-data-points.html). In practice the first step of the "TDA pipeline analysis" is to define a filtration of simplicial complexes for some data. This  notebook explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $R^d$,using the simplex tree data structure.
 
-[Notebook: Rips and alpha complexes from pairwise distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.html). It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distance. The definition of the metric on the data is usually given as an input or guided by the application. It is however important to notice that the choice of the metric may be critical to reveal interesting topological and geometric features of the data.We also give in this last notebook a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix.
+[Notebook: Rips and alpha complexes from pairwise distance]({{ site.github.url }}/Tuto-GUDHI-simplicial-complexes-from-distance-matrix.html). It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distance. The definition of the metric on the data is usually given as an input or guided by the application. It is however important to notice that the choice of the metric may be critical to reveal interesting topological and geometric features of the data.We also give in this last notebook a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix.
 
 
 TDA signatures can extracted from point clouds but in many cases in data sciences the question is to study the topology of the sublevel sets of a function. 
@@ -36,7 +36,7 @@ TDA signatures can extracted from point clouds but in many cases in data science
 
 Above is an example for a function defined on a subset of $R$ but in general the function f is defined on a subset of $R^d$. 
 
-[Notebook: cubical complexes](Tuto-GUDHI-cubical-complexes.html).  One first approach for studying the topology of the sublevel sets of a function is to define a regular grid on $R^d$ and then to define a filtered complex based on this grid and the function f.
+[Notebook: cubical complexes]({{ site.github.url }}/Tuto-GUDHI-cubical-complexes.html).  One first approach for studying the topology of the sublevel sets of a function is to define a regular grid on $R^d$ and then to define a filtered complex based on this grid and the function f.
  
 
 
@@ -53,21 +53,21 @@ Persistent homology is a powerful tool to compute, study and encode efficiently 
 ![title](Images/pers.png)    
     
 
-[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.html) In this notebook we show how to compute barcodes and persistence diagram from a filtration defined on the Protein binding dataset. This tutorial also introduces the bottleneck distance between persistence diagrams. 
+[Notebook: persistence diagrams]({{ site.github.url }}/Tuto-GUDHI-persistence-diagrams.html) In this notebook we show how to compute barcodes and persistence diagram from a filtration defined on the Protein binding dataset. This tutorial also introduces the bottleneck distance between persistence diagrams. 
 
 
 ### 3 - Alternative representations of persistence and linearization
 
 
 ### 4 - Statistical tools for persistence
-For many applications of persistent homology, we observe topological features close to the diagonal. Since they correspond to topological structures that die very soon after they appear in the filtration, these points are generally considered as "topological noise". Confidence regions for persistence diagram provide a rigorous framework to this idea. This [notebook](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.html) introduces the subsampling approach of [Fasy etal. 2014 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729). An alternative method is the bottleneck bootstrap method introduced in [Chazal etal. 2018](http://www.jmlr.org/papers/v18/15-484.html) and presented in this [notebook](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.html).
+For many applications of persistent homology, we observe topological features close to the diagonal. Since they correspond to topological structures that die very soon after they appear in the filtration, these points are generally considered as "topological noise". Confidence regions for persistence diagram provide a rigorous framework to this idea. This [notebook]({{ site.github.url }}/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.html) introduces the subsampling approach of [Fasy etal. 2014 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729). An alternative method is the bottleneck bootstrap method introduced in [Chazal etal. 2018](http://www.jmlr.org/papers/v18/15-484.html) and presented in this [notebook]({{ site.github.url }}/Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.html).
 
 ### 5 - Machine learning and deep learning for persistence
 
 
 ### 6- Alternative filtrations and robust TDA
 
-This  [notebook](Tuto-GUDHI-DTM-filtrations.html) introduces the distance to measure (DTM) filtration, as defined in [this paper](https://arxiv.org/abs/1811.04757). This filtration can be used for robust TDA. The DTM can also be used for robust approximations of compact sets, see this [notebook](Tuto-GUDHI-kPDTM-kPLM.html).
+This  [notebook]({{ site.github.url }}/Tuto-GUDHI-DTM-filtrations.html) introduces the distance to measure (DTM) filtration, as defined in [this paper](https://arxiv.org/abs/1811.04757). This filtration can be used for robust TDA. The DTM can also be used for robust approximations of compact sets, see this [notebook]({{ site.github.url }}/Tuto-GUDHI-kPDTM-kPLM.html).
 
 
 ### 7- Topological Data Analysis for Time series
@@ -82,14 +82,14 @@ This  [notebook](Tuto-GUDHI-DTM-filtrations.html) introduces the distance to mea
 
 ## Complete list of notebooks for TDA
 
-[Simplex trees](Tuto-GUDHI-simplex-Trees.html) 
+[Simplex trees]({{ site.github.url }}/Tuto-GUDHI-simplex-Trees.html) 
 
-[Vietoris-Rips complexes and alpha complexes from data points](Tuto-GUDHI-simplicial-complexes-from-data-points.html)  
+[Vietoris-Rips complexes and alpha complexes from data points]({{ site.github.url }}/Tuto-GUDHI-simplicial-complexes-from-data-points.html)  
 
-[Rips and alpha complexes from pairwise distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.html)
+[Rips and alpha complexes from pairwise distance]({{ site.github.url }}/Tuto-GUDHI-simplicial-complexes-from-distance-matrix.html)
 
-[Cubical complexes](Tuto-GUDHI-cubical-complexes.html)
+[Cubical complexes]({{ site.github.url }}/Tuto-GUDHI-cubical-complexes.html)
 
-[Persistence diagrams and bottleneck distance](Tuto-GUDHI-persistence-diagrams.html)
+[Persistence diagrams and bottleneck distance]({{ site.github.url }}/Tuto-GUDHI-persistence-diagrams.html)
 
 contact : bertrand michel 
