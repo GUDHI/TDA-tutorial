@@ -63,10 +63,10 @@ workflows:
             - notebook-execute
           filters:
             branches:
-              only: master
+              only: md2html_for_ghpages
       - notebook-html-deploy:
           requires:
             - notebook-html-generate
           filters:
             branches:
-              only: master
+              only: md2html_for_ghpages
