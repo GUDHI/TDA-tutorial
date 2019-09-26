@@ -1,17 +1,72 @@
 version: 2.0
 jobs:
-  jupyterexecute:
+  notebook-execute:
     docker:
       - image: gudhi/tda_tutorial_for_ci:latest
     steps:
       - checkout
       - run:
-          name: Convert and executes all notebooks
+          name: Executes all notebooks
           command: |
-            for f in *.ipynb; do echo "Processing $f file.."; time jupyter nbconvert --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $f;done;
+            for notebook in *.ipynb
+            do
+              echo "Processing $notebook file.."
+              time jupyter nbconvert --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $notebook
+            done
+  notebook-html-generate:
+    docker:
+      - image: gudhi/tda_tutorial_for_ci:latest
+    steps:
+      - checkout
+      - run:
+          name: Convert all notebooks to html
+          command: |
+            for notebook in *.ipynb
+            do
+              echo "Processing $notebook file.."
+              time jupyter nbconvert --to html --output-dir _doc/html $notebook
+            done
+      - persist_to_workspace:
+          root: _doc
+          paths: html            
+  # cf. https://circleci.com/blog/deploying-documentation-to-github-pages-with-continuous-integration/
+  notebook-html-deploy:
+    docker:
+      - image: node:8.10.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: _doc
+      - run:
+          name: Disable jekyll builds
+          command: touch _doc/html/.nojekyll
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "gudhi-ci@lists.gforge.inria.fr"
+            git config user.name "gudhi-ci"
+      - add_ssh_keys:
+          fingerprints:
+            - "a2:9d:91:b2:4d:ef:4c:95:d3:75:fb:dc:56:d0:67:c3"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist _doc/html
             
 workflows:
   version: 2
   build:
     jobs:
-      - jupyterexecute
+      - notebook-execute
+      - notebook-html-generate:
+          requires:
+            - notebook-execute
+          filters:
+            branches:
+              only: master
+      - notebook-html-deploy:
+          requires:
+            - notebook-html-generate
+          filters:
+            branches:
+              only: master
