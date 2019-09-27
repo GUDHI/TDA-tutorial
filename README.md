@@ -125,5 +125,4 @@ introduces the distance to measure (DTM) filtration, as defined in [this paper](
 [k-power-distance-to-measure and k-power-likelihood-to-measure filtrations](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-kPDTM-kPLM.html)
 ([download](Tuto-GUDHI-kPDTM-kPLM.ipynb))
 
-/home/vincent/workspace/gudhi/notebooks/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb
 contact : bertrand michel 
