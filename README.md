@@ -9,7 +9,7 @@ The complete list of notebooks can also be found at the end of this page.
 
 ### 0 - Install Python Gudhi Library  
 
-See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installation.html) or if you have conda you can make a [conda install](https://anaconda.org/conda-forge/gudhi).
+See the [installation page](https://gudhi.inria.fr/python/latest/installation.html) or if you have conda you can make a [conda install](https://anaconda.org/conda-forge/gudhi).
 
 ### 1 - Simplex trees and simpicial complexes
 
@@ -22,17 +22,17 @@ A simplicial complex is a set of [simplices](https://en.wikipedia.org/wiki/Simpl
 A filtration is a increasing sequence of sub-complexes of a simplicial complex K, it can be seen as ordering the simplices included in the complex K. Indeed, simpicial complexes often come with a specific order, as for [Vietoris-Rips complexes](https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex), [Cech complexes](https://en.wikipedia.org/wiki/%C4%8Cech_complex) and [alpha complexes](https://en.wikipedia.org/wiki/Alpha_shape#Alpha_complex). 
 
 [Notebook: Simplex trees](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplex-Trees.html)
-([download](Tuto-GUDHI-simplex-Trees.ipynb)).
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplex-Trees.ipynb.zip)).
 In Gudhi, filtered simplicial complexes are encoded through a data structure called simplex tree. The vertices are represented by integers, the edges by couple of integers etc.
-![CSexemple](http://gudhi.gforge.inria.fr/python/latest/_images/Simplex_tree_representation.png)
+![CSexemple](https://gudhi.inria.fr/python/latest/_images/Simplex_tree_representation.png)
 
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data points](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplicial-complexes-from-data-points.html)
-([download](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb)).
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb.zip)).
 In practice the first step of the "TDA pipeline analysis" is to define a filtration of simplicial complexes for some data. This  notebook explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $R^d$,using the simplex tree data structure.
 
 [Notebook: Rips and alpha complexes from pairwise distance](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplicial-complexes-from-distance-matrix.html)
-([download](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb)).
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb.zip)).
 It is also possible to define Rips complexes in general metric spaces from a matrix of pairwise distance. The definition of the metric on the data is usually given as an input or guided by the application. It is however important to notice that the choice of the metric may be critical to reveal interesting topological and geometric features of the data.We also give in this last notebook a way to define alpha complexes from matrix of pairwise distances by first applying a [multidimensional scaling (MDS)](https://en.wikipedia.org/wiki/Multidimensional_scaling) transformation on the matrix.
 
 
@@ -43,7 +43,7 @@ TDA signatures can extracted from point clouds but in many cases in data science
 Above is an example for a function defined on a subset of $R$ but in general the function f is defined on a subset of $R^d$. 
 
 [Notebook: cubical complexes](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-cubical-complexes.html)
-([download](Tuto-GUDHI-cubical-complexes.ipynb)).
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-cubical-complexes.ipynb.zip)).
 One first approach for studying the topology of the sublevel sets of a function is to define a regular grid on $R^d$ and then to define a filtered complex based on this grid and the function f.
  
 
@@ -62,7 +62,7 @@ Persistent homology is a powerful tool to compute, study and encode efficiently 
     
 
 [Notebook: persistence diagrams](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-persistence-diagrams.html)
-([download](Tuto-GUDHI-persistence-diagrams.ipynb)).
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-persistence-diagrams.ipynb.zip)).
 In this notebook we show how to compute barcodes and persistence diagram from a filtration defined on the Protein binding dataset. This tutorial also introduces the bottleneck distance between persistence diagrams. 
 
 
@@ -71,7 +71,7 @@ In this notebook we show how to compute barcodes and persistence diagram from a 
 
 ### 4 - Statistical tools for persistence
 For many applications of persistent homology, we observe topological features close to the diagonal. Since they correspond to topological structures that die very soon after they appear in the filtration, these points are generally considered as "topological noise". Confidence regions for persistence diagram provide a rigorous framework to this idea. This [notebook](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.html)
-([download](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb.zip))
 introduces the subsampling approach of [Fasy etal. 2014 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729). An alternative method is the bottleneck bootstrap method introduced in [Chazal etal. 2018](http://www.jmlr.org/papers/v18/15-484.html) and presented in this [notebook](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.html)
 ([download](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb)).
 
@@ -81,9 +81,9 @@ introduces the subsampling approach of [Fasy etal. 2014 AoS](https://projecteucl
 ### 6- Alternative filtrations and robust TDA
 
 This  [notebook](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-DTM-filtrations.html)
-([download](Tuto-GUDHI-ConfRegions-DTM-filtrations.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-DTM-filtrations.ipynb.zip))
 introduces the distance to measure (DTM) filtration, as defined in [this paper](https://arxiv.org/abs/1811.04757). This filtration can be used for robust TDA. The DTM can also be used for robust approximations of compact sets, see this [notebook](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-kPDTM-kPLM.html)
-([download](Tuto-GUDHI-ConfRegions-kPDTM-kPLM.ipynb)).
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-kPDTM-kPLM.ipynb.zip)).
 
 
 ### 7- Topological Data Analysis for Time series
@@ -99,30 +99,30 @@ introduces the distance to measure (DTM) filtration, as defined in [this paper](
 ## Complete list of notebooks for TDA
 
 [Simplex trees](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplex-Trees.html)
-([download](Tuto-GUDHI-ConfRegions-simplex-Trees.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-simplex-Trees.ipynb.zip))
 
 [Vietoris-Rips complexes and alpha complexes from data points](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplicial-complexes-from-data-points.html)  
-([download](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb.zip))
 
 [Rips and alpha complexes from pairwise distance](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplicial-complexes-from-distance-matrix.html)
-([download](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb.zip))
 
 [Cubical complexes](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-cubical-complexes.html)
-([download](Tuto-GUDHI-cubical-complexes.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-cubical-complexes.ipynb.zip))
 
 [Persistence diagrams and bottleneck distance](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-persistence-diagrams.html)
-([download](Tuto-GUDHI-persistence-diagrams.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-persistence-diagrams.ipynb.zip))
 
 [Confidence regions for persistence diagrams : data points](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.html)
-([download](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb.zip))
 
 [Confidence regions for persistence diagrams : bottleneck bootstrap](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.html)
-([download](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb.zip))
 
 [Distance-to-measure filtrations](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-DTM-filtrations.html)
-([download](Tuto-GUDHI-DTM-filtrations.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-DTM-filtrations.ipynb.zip))
 
 [k-power-distance-to-measure and k-power-likelihood-to-measure filtrations](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-kPDTM-kPLM.html)
-([download](Tuto-GUDHI-kPDTM-kPLM.ipynb))
+([download](https://gudhi.github.io/TDA-tutorial/Tuto-GUDHI-kPDTM-kPLM.ipynb.zip))
 
 contact : bertrand michel 
