@@ -10,7 +10,7 @@ jobs:
           command: |
             for notebook in *.ipynb
             do
-              echo "Processing $notebook file.."
+              echo "Processing $notebook file..."
               time jupyter nbconvert --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $notebook
             done
   notebook-html-generate:
@@ -23,8 +23,10 @@ jobs:
           command: |
             for notebook in *.ipynb
             do
-              echo "Processing $notebook file.."
+              echo "Processing $notebook file..."
               time jupyter nbconvert --to html --output-dir _doc/html $notebook
+              echo "Zip $notebook file..."
+              zip -r _doc/html/$notebook.zip $notebook
             done
       - persist_to_workspace:
           root: _doc
