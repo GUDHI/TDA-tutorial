@@ -13,6 +13,7 @@ RUN conda install --yes --freeze-installed -c conda-forge \
     gudhi \
     jupyter \
     git \
+    zip \
     && conda clean -afy \
     && find /opt/conda/ -follow -type f -name '*.a' -delete      \
     && find /opt/conda/ -follow -type f -name '*.pyc' -delete    \
