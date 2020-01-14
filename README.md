@@ -62,6 +62,10 @@ For many applications of persistent homology, we observe topological features cl
 
 ### 5 - Machine learning and deep learning for persistence
 
+Two libraries related to Gudhi:   
+- [ATOL](https://github.com/martinroyer/atol): Automatic Topologically-Oriented Learning. See [this tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).     
+- [Perslay](https://github.com/MathieuCarriere/perslay): A Simple and Versatile Neural Network Layer for Persistence Diagrams. See [this tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial).
+
 
 ### 6- Alternative filtrations and robust TDA
 
