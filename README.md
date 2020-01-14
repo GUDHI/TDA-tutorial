@@ -60,7 +60,7 @@ Persistent homology is a powerful tool to compute, study and encode efficiently 
 ### 4 - Statistical tools for persistence
 For many applications of persistent homology, we observe topological features close to the diagonal. Since they correspond to topological structures that die very soon after they appear in the filtration, these points are generally considered as "topological noise". Confidence regions for persistence diagram provide a rigorous framework to this idea. This [notebook](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb) introduces the subsampling approach of [Fasy etal. 2014 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729). An alternative method is the bottleneck bootstrap method introduced in [Chazal etal. 2018](http://www.jmlr.org/papers/v18/15-484.html) and presented in this [notebook](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb).
 
-### 5 - Machine learning and deep learning for persistence
+### 5 - Machine learning and deep learning for TDA
 
 Two libraries related to Gudhi:   
 - [ATOL](https://github.com/martinroyer/atol): Automatic Topologically-Oriented Learning. See [this tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).     
