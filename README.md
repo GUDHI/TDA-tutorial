@@ -94,4 +94,18 @@ This  [notebook](Tuto-GUDHI-DTM-filtrations.ipynb) introduces the distance to me
 
 [Persistence diagrams and bottleneck distance](Tuto-GUDHI-persistence-diagrams.ipynb)
 
-contact : bertrand michel 
+[Confidence regions for persistence diagrams - data points](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
+
+[Confidence regions with Bottleneck Bootstrap](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb)
+
+[ATOL tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb)   
+
+[Perslay tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial)
+
+[DTM-filtrations](Tuto-GUDHI-DTM-filtrations.ipynb) 
+
+[kPDTM-kPLM](Tuto-GUDHI-kPDTM-kPLM.ipynb)
+
+
+
+contact : bertrand.michel@ec-nantes.fr
