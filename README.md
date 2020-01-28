@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GUDHI/TDA-tutorial/master)
+
 Tutorials for Topological Data Analysis with the Gudhi Library
 ================
 
