@@ -14,6 +14,7 @@ RUN conda install --yes --freeze-installed -c conda-forge \
     jupyter \
     git \
     zip \
+    && conda install --yes --freeze-installed -c plotly plotly=4.5.0 \
     && conda clean -afy \
     && find /opt/conda/ -follow -type f -name '*.a' -delete      \
     && find /opt/conda/ -follow -type f -name '*.pyc' -delete    \
