@@ -153,10 +153,7 @@ regions for persistence diagram provide a rigorous framework to this
 idea. This [notebook](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 introduces the subsampling approach of [Fasy et al. 2014
 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729).
-An alternative method is the bottleneck bootstrap method introduced in
-[Chazal et al. 2018](http://www.jmlr.org/papers/v18/15-484.html) and
-presented in this
-[notebook](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb).
+ 
 
 ### 5 - Machine learning and deep learning with TDA
 
