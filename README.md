@@ -146,6 +146,9 @@ also introduces the bottleneck distance between persistence diagrams.
 
 ### 3 - Alternative representations of persistence and linearization
 
+In this [notebook](Tuto-GUDHI-representations.ipynb), we learn how to use alternative representations of persistence
+with the representations module and finally we see a first example of how to efficiently combine machine learning and topological data analysis.
+
 ### 4 - Statistical tools for persistence
 
 For many applications of persistent homology, we observe topological
@@ -182,6 +185,10 @@ compact sets, see this [notebook](Tuto-GUDHI-kPDTM-kPLM.ipynb).
 
 ### 9- TDA and dimension reduction
 
+### 10- Inverse problem and optimization with TDA 
+
+In this [notebook](Tuto-GUDHI-optimization.ipynb), we will see how Gudhi and Tensorflow can be combined to perform optimization of persistence diagrams to sove an inverse problem.
+
 ## Complete list of notebooks for TDA
 
 [Simplex trees](Tuto-GUDHI-simplex-Trees.ipynb)
@@ -199,6 +206,8 @@ distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb)
 [Persistence diagrams and bottleneck
 distance](Tuto-GUDHI-persistence-diagrams.ipynb)
 
+[Representations of persistence](Tuto-GUDHI-representations.ipynb)
+
 [Confidence regions for persistence diagrams - data
 points](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 
@@ -214,5 +223,8 @@ tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial)
 [DTM-filtrations](Tuto-GUDHI-DTM-filtrations.ipynb)
 
 [kPDTM-kPLM](Tuto-GUDHI-kPDTM-kPLM.ipynb)
+
+[Inverse problem and optimization with TDA](Tuto-GUDHI-optimization.ipynb)
+
 
 Contact : <bertrand.michel@ec-nantes.fr>
