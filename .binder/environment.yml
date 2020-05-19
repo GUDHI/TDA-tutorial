@@ -8,5 +8,6 @@ dependencies:
   - matplotlib
   - seaborn
   - scikit-learn
+  - tensorflow
   - plotly
   - gudhi

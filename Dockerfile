@@ -1,5 +1,5 @@
 # Inspired from https://jcrist.github.io/conda-docker-tips.html
-FROM continuumio/miniconda3:4.6.14
+FROM continuumio/miniconda3:4.7.12
 
 ENV PYTHONDONTWRITEBYTECODE=true
 
@@ -10,6 +10,7 @@ RUN conda install --yes --freeze-installed -c conda-forge \
     matplotlib \
     seaborn \
     scikit-learn \
+    tensorflow \
     gudhi \
     jupyter \
     git \

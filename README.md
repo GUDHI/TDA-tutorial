@@ -144,10 +144,12 @@ In this notebook we show how to compute barcodes and persistence diagram
 from a filtration defined on the Protein binding dataset. This tutorial
 also introduces the bottleneck distance between persistence diagrams.
 
-### 3 - Alternative representations of persistence and linearization
+### 3 - Representations of persistence and linearization
 
 In this [notebook](Tuto-GUDHI-representations.ipynb), we learn how to use alternative representations of persistence
 with the representations module and finally we see a first example of how to efficiently combine machine learning and topological data analysis.
+
+This [notebook](Tuto-GUDHI-Expected-persistence-diagrams.ipynb) illustrates the notion of "Expected Persistence Diagram", which is a way to encode the topology of a random process as a deterministic measure.
 
 ### 4 - Statistical tools for persistence
 
@@ -207,6 +209,8 @@ distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb)
 distance](Tuto-GUDHI-persistence-diagrams.ipynb)
 
 [Representations of persistence](Tuto-GUDHI-representations.ipynb)
+
+[Expected Persistence Diagram](Tuto-GUDHI-Expected-persistence-diagrams.ipynb)
 
 [Confidence regions for persistence diagrams - data
 points](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
