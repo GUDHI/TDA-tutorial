@@ -10,4 +10,6 @@ dependencies:
   - scikit-learn
   - tensorflow
   - plotly
+  - pot
+  - networkx
   - gudhi
