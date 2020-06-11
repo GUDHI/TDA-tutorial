@@ -2,12 +2,15 @@ version: 2.0
 jobs:
   jupyterexecute:
     docker:
-      - image: gudhi/tda_tutorial_for_ci:latest
+      - image: continuumio/miniconda3:4.8.2-alpine
     steps:
       - checkout
       - run:
           name: Convert and executes all notebooks
           command: |
+            conda env create -f .binder/environment.yml
+            conda activate tdatuto
+            conda install --yes -c conda-forge jupyter
             for f in *.ipynb; do echo "Processing $f file.."; time jupyter nbconvert --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $f;done;
             
 workflows:
