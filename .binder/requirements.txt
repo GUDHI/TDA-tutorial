@@ -3,7 +3,7 @@ pandas
 matplotlib
 seaborn
 scikit-learn
-tensorflow==1.15
+tensorflow
 plotly
 pot
 networkx
