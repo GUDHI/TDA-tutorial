@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tensorflow==1.15
+plotly
+pot
+networkx
+gudhi

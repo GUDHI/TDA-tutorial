@@ -2,12 +2,14 @@ version: 2.0
 jobs:
   jupyterexecute:
     docker:
-      - image: gudhi/tda_tutorial_for_ci:latest
+      - image: circleci/python:3.8
     steps:
       - checkout
       - run:
           name: Convert and executes all notebooks
           command: |
+            pip install -r .binder/requirements.txt
+            pip install jupyter
             for f in *.ipynb; do echo "Processing $f file.."; time jupyter nbconvert --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $f;done;
             
 workflows:
