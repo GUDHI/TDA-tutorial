@@ -12,11 +12,14 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r .binder/requirements.txt
         pip install jupyter
+    - name: Install matplotlib
+      run: |
+        apt-get install python-matplotlib
     - name: Execute notebooks
       run: |
         for f in *.ipynb; do echo "Processing $f file.."; time jupyter nbconvert --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $f;done;
