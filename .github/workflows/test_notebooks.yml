@@ -12,9 +12,9 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Install matplotlib with LaTeX support
+    - name: Install LaTeX support for matplotlib
       run: |
-        sudo apt-get install ghostscript dvipng inkscape texlive 
+        sudo apt-get install ghostscript dvipng inkscape texlive texlive-latex-extra
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
