@@ -161,9 +161,12 @@ regions for persistence diagram provide a rigorous framework to this
 idea. This [notebook](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 introduces the subsampling approach of [Fasy et al. 2014
 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729).
- 
 
-### 5 - Machine learning and deep learning with TDA
+### 5 - A Bayesian Framework for Persistent Homology
+
+C. Oballe and V. Maroulas provide a [tutorial](https://github.com/coballejr/misc/blob/master/Tuto-GUDHI-bayes-tda.ipynb)for a Python module that implements the model for Bayesian inference with persistence diagrams introduced in  their [paper](https://epubs.siam.org/doi/pdf/10.1137/19M1268719).
+
+### 6 - Machine learning and deep learning with TDA
 
 Two libraries related to Gudhi:  
 \- [ATOL](https://github.com/martinroyer/atol): Automatic
@@ -173,7 +176,7 @@ tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).
 Versatile Neural Network Layer for Persistence Diagrams. See [this
 tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial).
 
-### 6- Alternative filtrations and robust TDA
+### 7- Alternative filtrations and robust TDA
 
 This [notebook](Tuto-GUDHI-DTM-filtrations.ipynb) introduces the
 distance to measure (DTM) filtration, as defined in [this
@@ -181,13 +184,13 @@ paper](https://arxiv.org/abs/1811.04757). This filtration can be used
 for robust TDA. The DTM can also be used for robust approximations of
 compact sets, see this [notebook](Tuto-GUDHI-kPDTM-kPLM.ipynb).
 
-### 7- Topological Data Analysis for Time series
+### 8- Topological Data Analysis for Time series
 
-### 8- Cover complexes and the Mapper Algorithm
+### 9- Cover complexes and the Mapper Algorithm
 
-### 9- TDA and dimension reduction
+### 10- TDA and dimension reduction
 
-### 10- Inverse problem and optimization with TDA 
+### 11- Inverse problem and optimization with TDA 
 
 In this [notebook](Tuto-GUDHI-optimization.ipynb), we will see how Gudhi and Tensorflow can be combined to perform optimization of persistence diagrams to sove an inverse problem.
 
