@@ -20,7 +20,7 @@ See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installat
 
 ## TDA Analysis Pipeline
 
-### 1 - Simplex trees and simpicial complexes
+### 01 - Simplex trees and simpicial complexes
 
 TDA typically aims at extracting topological signatures from a point cloud in $\mathbb{R}^d$ or in a general metric space. By studying the topology of a point cloud, we actually mean studying the topology of the unions of balls centered at the point cloud, also called *offsets*. However, non-discrete sets such as offsets, and also continuous mathematical shapes like curves, surfaces and more generally manifolds, cannot easily be encoded as finite discrete structures. [Simplicial complexes](https://en.wikipedia.org/wiki/Simplicial_complex) are therefore used in computational geometry to approximate such shapes. 
 
@@ -52,47 +52,60 @@ Above is an example for a function defined on a subset of $\mathbb{R}$ but in ge
 
 [Notebook: cubical complexes](Tuto-GUDHI-cubical-complexes.ipynb).  One first approach for studying the topology of the sublevel sets of a function is to define a regular grid on $\mathbb{R}^d$ and then to define a filtered complex based on this grid and the function $f$.
  
-### 2 - Persistence homology and persistence diagrams
+### 02 - Persistent homology and persistence diagrams
 
-Homology is a classical concept in algebraic topology providing a powerful tool to formalize and handle the notion of topological features of a topological space or of a simplicial complex in an algebraic way. For any dimension k, the k-dimensional "holes" are represented by a vector space Hk whose dimension is intuitively the number of such independent features. For example the 0-dimensional homology group H0 represents the connected components of the complex, the 1-dimensional homology group H1 represents the 1-dimensional loops, the 2-dimensional homology group H2 represents the 2-dimensional cavities...
+Homology is a well-known concept in algebraic topology. It provides a powerful tool to formalize and handle the notion of topological features of a topological space or of a simplicial complex in an algebraic way. For any dimension $k$, the $k$-dimensional *holes* are represented by a vector space $H_k$, whose dimension is intuitively the number of such independent features. For example, the $0$-dimensional homology group $H_0$ represents the connected components of the complex, the $1$-dimensional homology group $H_1$ represents the $1$-dimensional loops, the $2$-dimensional homology group $H_2$ represents the $2$-dimensional cavities and so on.
 
-Persistent homology is a powerful tool to compute, study and encode efficiently multiscale topological features of nested families of simplicial complexes and topological spaces. It encodes the evolution of the homology groups of the nested complexes across the scales.
-
-Persistent homology is a powerful tool to compute, study and encode efficiently multiscale topological features of nested families of simplicial complexes and topological spaces. It encodes the evolution of the homology groups of the nested complexes across the scales. The diagram below shows several level sets of the filtration.
+Persistent homology is a powerful tool to compute, study and encode efficiently multiscale topological features of nested families of simplicial complexes and topological spaces. It encodes the evolution of the homology groups of the nested complexes across the scales. The diagram below shows several level sets of the filtration:
 
 ```{r persistence}
 knitr::include_graphics("Images/pers.png")
 ```
 
-[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb) In this notebook we show how to compute barcodes and persistence diagram from a filtration defined on the Protein binding dataset. This tutorial also introduces the bottleneck distance between persistence diagrams. 
+[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb) In this notebook we show how to compute barcodes and persistence diagrams from a filtration defined on the Protein binding dataset. This tutorial also introduces the bottleneck distance between persistence diagrams. 
 
-### 3 - Alternative representations of persistence and linearization
+### 03 - Representations of persistence and linearization
 
-### 4 - Statistical tools for persistence
+In this [notebook](Tuto-GUDHI-representations.ipynb), we learn how to use alternative representations of persistence with the representations module and finally we see a first example of how to efficiently combine machine learning and topological data analysis.
 
-For many applications of persistent homology, we observe topological features close to the diagonal. Since they correspond to topological structures that die very soon after they appear in the filtration, these points are generally considered as "topological noise". Confidence regions for persistence diagram provide a rigorous framework to this idea. This [notebook](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb) introduces the subsampling approach of [Fasy et al. 2014 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729). An alternative method is the bottleneck bootstrap method introduced in [Chazal et al. 2018](http://www.jmlr.org/papers/v18/15-484.html) and presented in this [notebook](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb).
+This [notebook](Tuto-GUDHI-Expected-persistence-diagrams.ipynb) illustrates the notion of "Expected Persistence Diagram", which is a way to encode the topology of a random process as a deterministic measure.
 
-### 5 - Machine learning and deep learning with TDA
+### 04 - Statistical tools for persistence
 
-Two libraries related to Gudhi:   
-- [ATOL](https://github.com/martinroyer/atol): Automatic Topologically-Oriented Learning. See [this tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).     
+For many applications of persistent homology, we observe topological features close to the diagonal. Since they correspond to topological structures that die very soon after they appear in the filtration, these points are generally considered as “topological noise”. Confidence regions for persistence diagram provide a rigorous framework to this idea. This [notebook](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb) introduces the subsampling approach of [Fasy et al. 2014 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729).
+
+### 05 - A Bayesian Framework for Persistent Homology
+
+C. Oballe and V. Maroulas provide a [tutorial](https://github.com/coballejr/misc/blob/master/Tuto-GUDHI-bayes-tda.ipynb)for a Python module that implements the model for Bayesian inference with persistence diagrams introduced in  their [paper](https://epubs.siam.org/doi/pdf/10.1137/19M1268719).
+
+### 06 - Machine learning and deep learning with TDA
+
+Two libraries related to Gudhi:  
+
+- [ATOL](https://github.com/martinroyer/atol): Automatic Topologically-Oriented Learning. See [this tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).
 - [Perslay](https://github.com/MathieuCarriere/perslay): A Simple and Versatile Neural Network Layer for Persistence Diagrams. See [this tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial).
 
-### 6- Alternative filtrations and robust TDA
+### 07 - Alternative filtrations and robust TDA
 
 This [notebook](Tuto-GUDHI-DTM-filtrations.ipynb) introduces the distance to measure (DTM) filtration, as defined in [this paper](https://arxiv.org/abs/1811.04757). This filtration can be used for robust TDA. The DTM can also be used for robust approximations of compact sets, see this [notebook](Tuto-GUDHI-kPDTM-kPLM.ipynb).
 
-### 7- Topological Data Analysis for Time series
+### 08 - Topological Data Analysis for Time series
 
-### 8- Cover complexes and the Mapper Algorithm 
+### 09 - Cover complexes and the Mapper Algorithm
 
-### 9- TDA and dimension reduction
+### 10 - TDA and dimension reduction
+
+### 11 - Inverse problem and optimization with TDA 
+
+In this [notebook](Tuto-GUDHI-optimization.ipynb), we will see how Gudhi and Tensorflow can be combined to perform optimization of persistence diagrams to sove an inverse problem.
 
 ## Complete list of notebooks for TDA
 
-[Simplex trees](Tuto-GUDHI-simplex-Trees.ipynb) 
+[Simplex trees](Tuto-GUDHI-simplex-Trees.ipynb)
 
-[Vietoris-Rips complexes and alpha complexes from data points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb)  
+[Vietoris-Rips complexes and alpha complexes from data points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb)
+
+[Visualizing simplicial complexes](Tuto-GUDHI-alpha-complex-visualization.ipynb)
 
 [Rips and alpha complexes from pairwise distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb)
 
@@ -100,16 +113,23 @@ This [notebook](Tuto-GUDHI-DTM-filtrations.ipynb) introduces the distance to mea
 
 [Persistence diagrams and bottleneck distance](Tuto-GUDHI-persistence-diagrams.ipynb)
 
+[Representations of persistence](Tuto-GUDHI-representations.ipynb)
+
+[Expected Persistence Diagram](Tuto-GUDHI-Expected-persistence-diagrams.ipynb)
+
 [Confidence regions for persistence diagrams - data points](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 
 [Confidence regions with Bottleneck Bootstrap](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb)
 
-[ATOL tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb)   
+[ATOL tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb)
 
 [Perslay tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial)
 
-[DTM-filtrations](Tuto-GUDHI-DTM-filtrations.ipynb) 
+[DTM-filtrations](Tuto-GUDHI-DTM-filtrations.ipynb)
 
 [kPDTM-kPLM](Tuto-GUDHI-kPDTM-kPLM.ipynb)
 
-Contact : bertrand.michel@ec-nantes.fr
+[Inverse problem and optimization with TDA](Tuto-GUDHI-optimization.ipynb)
+
+
+Contact : <bertrand.michel@ec-nantes.fr>
