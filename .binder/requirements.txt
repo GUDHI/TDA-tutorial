@@ -4,6 +4,7 @@ matplotlib
 seaborn
 scikit-learn
 tensorflow
+tensorflow_addons
 plotly
 pot
 networkx
