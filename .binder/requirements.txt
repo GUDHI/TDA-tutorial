@@ -9,3 +9,5 @@ plotly
 pot
 networkx
 gudhi
+torch
+eagerpy
