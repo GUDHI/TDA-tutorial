@@ -4,8 +4,10 @@ matplotlib
 seaborn
 scikit-learn
 tensorflow
-tensorflow_addons
+tensorflow-addons
 plotly
 pot
 networkx
 gudhi
+torch
+eagerpy

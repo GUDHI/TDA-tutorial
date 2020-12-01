@@ -198,9 +198,11 @@ compact sets, see this [notebook](Tuto-GUDHI-kPDTM-kPLM.ipynb).
 
 ### 11 - Inverse problem and optimization with TDA
 
-In this [notebook](Tuto-GUDHI-optimization.ipynb), we will see how Gudhi
-and Tensorflow can be combined to perform optimization of persistence
-diagrams to sove an inverse problem.
+In this [notebook](Tuto-GUDHI-optimization.ipynb), we will see how Gudhi and
+Tensorflow can be combined to perform optimization of persistence diagrams to
+solve an inverse problem. This other, less complete
+[notebook](Tuto-GUDHI-PyTorch-optimization.ipynb) shows that this kind of
+optimization works just as well with PyTorch.
 
 ## Complete list of notebooks for TDA
 
@@ -241,7 +243,8 @@ tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial)
 
 [kPDTM-kPLM](Tuto-GUDHI-kPDTM-kPLM.ipynb)
 
-[Inverse problem and optimization with
-TDA](Tuto-GUDHI-optimization.ipynb)
+[Inverse problem and optimization with TDA](Tuto-GUDHI-optimization.ipynb)
+
+[PyTorch differentiation of diagrams](Tuto-GUDHI-PyTorch-optimization.ipynb)
 
 Contact : <bertrand.michel@ec-nantes.fr>
