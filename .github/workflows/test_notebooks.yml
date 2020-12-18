@@ -14,7 +14,8 @@ jobs:
         python-version: 3.8
     - name: Install LaTeX support for matplotlib
       run: |
-        sudo apt-get install ghostscript dvipng texlive-full
+        sudo apt update
+        sudo apt install -y ghostscript dvipng texlive-full
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
