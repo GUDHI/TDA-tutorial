@@ -1,3 +1,8 @@
+# This file is released under MIT licence, see file LICENSE.
+# Author(s):       Theo Lacombe
+#
+# Copyright (C) 2021 Inria
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
