@@ -5,9 +5,26 @@
 
 import re
 import requests
+import sys
 from urllib.request import urlopen
 from colorama import Fore
 
+log_verbose = False # Not verbose by default (only handles 404 errors) ; if set to True, the other errors types are displayed among other traces
+
+if len(sys.argv) >= 2:
+    if sys.argv[1] == "verbose":
+        log_verbose = True
+    else :
+        print("The only supported additional argument is 'verbose'")
+        exit(1)
+
+def print_cond(cond, str):
+    if cond:
+        print(str)
+    else:
+        pass
+
+exit_status = 0
 # Get data from gudhi TDA-tutorial repo README
 data  = urlopen("https://raw.githubusercontent.com/GUDHI/TDA-tutorial/master/README.md").read().decode('utf-8')
 
@@ -23,7 +40,7 @@ for match in re.findall(markup_regex, data):
         list_http_links.append(match[1])
 
 # Check validity of these urls
-print(Fore.CYAN + "Checking websites URLs status code ... " + Fore.RESET)
+print_cond(log_verbose, Fore.CYAN + "Checking websites URLs status code ... " + Fore.RESET)
 
 all_good = True
 for url in list_http_links:
@@ -33,13 +50,14 @@ for url in list_http_links:
             all_good = False
             if (r.status_code == 404):
                 print(Fore.RED + "{} is not working. The returned status code is {:4d}".format(url, r.status_code) + Fore.RESET)
+                exit_status = 1
             else:
-                print(Fore.LIGHTYELLOW_EX + "{} may not be working. The returned status code is {:4d}".format(url, r.status_code) + Fore.RESET)
+                print_cond(log_verbose, Fore.LIGHTYELLOW_EX + "{} may not be working. The returned status code is {:4d}".format(url, r.status_code) + Fore.RESET)
     except requests.ConnectionError:
-        print(Fore.RED + "Failed to connect to " + url + Fore.RESET)
+        print_cond(log_verbose, Fore.RED + "Failed to connect to " + url + Fore.RESET)
 
 if all_good:
-    print(Fore.GREEN + "All links to websites work fine !" + Fore.RESET)
+    print_cond(log_verbose, Fore.GREEN + "All links to websites work fine !" + Fore.RESET)
 
 
 # Get all jupyter notebooks included in the README
@@ -52,7 +70,7 @@ list_nb = re.findall('%s(.*)%s' % (start, end), data)
 list_nb = [x + ".ipynb" for x in list_nb]
 
 # Check the notebooks links
-print(Fore.CYAN + "Checking notebooks URLs status code ... " + Fore.RESET)
+print_cond(log_verbose, Fore.CYAN + "Checking notebooks URLs status code ... " + Fore.RESET)
 
 raw_nb_url = []
 all_good = True
@@ -66,20 +84,21 @@ for nb in list_nb:
                 all_good = False
                 if (r.status_code == 404):
                     print(Fore.RED + "{} is not working. The returned status code is {:4d}".format(url, r.status_code) + Fore.RESET)
+                    exit_status = 1
                 else:
-                    print(Fore.LIGHTYELLOW_EX + "{} may not be working. The returned status code is {:4d}".format(url, r.status_code) + Fore.RESET)
+                    print_cond(log_verbose, Fore.LIGHTYELLOW_EX + "{} may not be working. The returned status code is {:4d}".format(url, r.status_code) + Fore.RESET)
             else:
                 raw_nb_url.append("https://raw.githubusercontent.com/GUDHI/TDA-tutorial/master/"+nb)
         except requests.ConnectionError:
-            print(Fore.RED + "Failed to connect to " + url + Fore.RESET)
+            print_cond(log_verbose, Fore.RED + "Failed to connect to " + url + Fore.RESET)
 
 if all_good:
-    print(Fore.GREEN + "All links to notebooks work fine !" + Fore.RESET)
+    print_cond(log_verbose, Fore.GREEN + "All links to notebooks work fine !" + Fore.RESET)
 
 # Check links inside notebooks
 for nb in raw_nb_url:
     all_good = True
-    print(Fore.CYAN + "Checking URLs status code of notebook " + nb + " ..." + Fore.RESET)
+    print_cond(log_verbose, Fore.CYAN + "Checking URLs status code of notebook " + nb + " ..." + Fore.RESET)
     raw_nb_data  = urlopen(nb).read().decode('utf-8')
     # Beginning with http or https and ending with ' ', '"' or ')' or '\n' or ''' or '>'
     url_nb_regex = r"http[s]?://[^)\"\ \\\n\'\>]+"
@@ -98,10 +117,12 @@ for nb in raw_nb_url:
                 all_good = False
                 if (r.status_code == 404):
                     print(Fore.RED + "{} is not working. The returned status code is {:4d}".format(match, r.status_code) + Fore.RESET)
+                    exit_status = 1
                 else:
-                    print(Fore.LIGHTYELLOW_EX + "{} may not be working. The returned status code is {:4d}".format(match, r.status_code) + Fore.RESET)
+                    print_cond(log_verbose, Fore.LIGHTYELLOW_EX + "{} may not be working. The returned status code is {:4d}".format(match, r.status_code) + Fore.RESET)
         except requests.ConnectionError:
-            print(Fore.RED + "Failed to connect to " + match + Fore.RESET)
+            print_cond(log_verbose, Fore.RED + "Failed to connect to " + match + Fore.RESET)
     if all_good:
-        print(Fore.GREEN + "All links in the notebook work fine !" + Fore.RESET)
+        print_cond(log_verbose, Fore.GREEN + "All links in the notebook work fine !" + Fore.RESET)
 
+exit(exit_status)
