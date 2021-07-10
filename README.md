@@ -230,9 +230,6 @@ Diagram](Tuto-GUDHI-Expected-persistence-diagrams.ipynb)
 [Confidence regions for persistence diagrams - data
 points](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 
-[Confidence regions with Bottleneck
-Bootstrap](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb)
-
 [ATOL
 tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb)
 
