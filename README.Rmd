@@ -119,8 +119,6 @@ In this [notebook](Tuto-GUDHI-optimization.ipynb), we will see how Gudhi and Ten
 
 [Confidence regions for persistence diagrams - data points](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 
-[Confidence regions with Bottleneck Bootstrap](Tuto-GUDHI-ConfRegions-PersDiag-BottleneckBootstrap.ipynb)
-
 [ATOL tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb)
 
 [Perslay tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial)
