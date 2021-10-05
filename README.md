@@ -73,6 +73,10 @@ simplex trees) from data points in
 ![\\mathbb{R}^d](https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5Ed
 "\\mathbb{R}^d"), using the simplex tree data structure.
 
+
+This [Notebook](Tuto-GUDHI-alpha-complex-visualization.ipynb) shows how to visualize simplicial complexes.
+
+
 [Notebook: Rips and alpha complexes from pairwise
 distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb).
 It is also possible to define Rips complexes in general metric spaces
