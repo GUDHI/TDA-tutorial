@@ -16,7 +16,7 @@ Topological Data Analysis (TDA) is a recent and fast growing field providing a s
 
 ## Install Python Gudhi Library  
 
-See the [installation page](http://gudhi.gforge.inria.fr/python/latest/installation.html) or if you have conda you can make a [conda install](https://anaconda.org/conda-forge/gudhi).
+See the [installation page](http://gudhi.inria.fr/python/latest/installation.html) or if you have conda you can make a [conda install](https://anaconda.org/conda-forge/gudhi).
 
 ## TDA Analysis Pipeline
 
@@ -35,7 +35,7 @@ A filtration is an increasing sequence of sub-complexes of a simplicial complex 
 [Notebook: Simplex trees](Tuto-GUDHI-simplex-Trees.ipynb). In Gudhi, filtered simplicial complexes are encoded through a data structure called simplex tree. Vertices are represented as integers, edges as pairs of integers, etc.
 
 ```{r gudhi-filtration-example}
-knitr::include_graphics("http://gudhi.gforge.inria.fr/python/latest/_images/Simplex_tree_representation.png")
+knitr::include_graphics("http://gudhi.inria.fr/python/latest/_images/Simplex_tree_representation.png")
 ```
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb). In practice, the first step of the **TDA Analysis Pipeline** is to define a filtration of simplicial complexes for some data. This  notebook explains how to build Vietoris-Rips complexes and alpha complexes (represented as simplex trees) from data points in $\mathbb{R}^d$, using the simplex tree data structure.

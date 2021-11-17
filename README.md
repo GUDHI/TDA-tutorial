@@ -13,7 +13,7 @@ at the end of this page.
 ## Install Python Gudhi Library
 
 See the [installation
-page](http://gudhi.gforge.inria.fr/python/latest/installation.html) or
+page](http://gudhi.inria.fr/python/latest/installation.html) or
 if you have conda you can make a [conda
 install](https://anaconda.org/conda-forge/gudhi).
 
@@ -62,7 +62,7 @@ filtered simplicial complexes are encoded through a data structure
 called simplex tree. Vertices are represented as integers, edges as
 pairs of integers, etc.
 
-<img src="http://gudhi.gforge.inria.fr/python/latest/_images/Simplex_tree_representation.png" style="display: block; margin: auto;" />
+<img src="http://gudhi.inria.fr/python/latest/_images/Simplex_tree_representation.png" style="display: block; margin: auto;" />
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data
 points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb). In
