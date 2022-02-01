@@ -70,6 +70,8 @@ In this [notebook](Tuto-GUDHI-representations.ipynb), we learn how to use altern
 
 This [notebook](Tuto-GUDHI-Expected-persistence-diagrams.ipynb) illustrates the notion of "Expected Persistence Diagram", which is a way to encode the topology of a random process as a deterministic measure.
 
+This [notebook](Tuto-GUDHI-persistent-entropy.ipynb) shows how to summarize the information given by persistent homology using persistent entropy (a number) and the ES-function (a curve) and explains in which situations they can be useful.
+
 ### 04 - Statistical tools for persistence
 
 For many applications of persistent homology, we observe topological features close to the diagonal. Since they correspond to topological structures that die very soon after they appear in the filtration, these points are generally considered as “topological noise”. Confidence regions for persistence diagram provide a rigorous framework to this idea. This [notebook](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb) introduces the subsampling approach of [Fasy et al. 2014 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729).
