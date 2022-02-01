@@ -156,6 +156,11 @@ This [notebook](Tuto-GUDHI-Expected-persistence-diagrams.ipynb)
 illustrates the notion of “Expected Persistence Diagram”, which is a way
 to encode the topology of a random process as a deterministic measure.
 
+This [notebook](Tuto-GUDHI-persistent-entropy.ipynb) shows how to summarize
+the information given by persistent homology using persistent entropy (a
+number) and the ES-function (a curve) and explains in which situations they
+can be useful.
+
 ### 04 - Statistical tools for persistence
 
 For many applications of persistent homology, we observe topological
