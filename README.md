@@ -55,7 +55,7 @@ filtered simplicial complexes are encoded through a data structure
 called simplex tree. Vertices are represented as integers, edges as
 pairs of integers, etc.
 
-![simplex tree representation](https://gudhi.inria.fr/python/latest/_images/Simplex_tree_representation.png)
+![simplex tree representation](Images/Simplex_tree_representation.png)
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data
 points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb). In
