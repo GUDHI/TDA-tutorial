@@ -39,7 +39,7 @@ structures that are proven to reflect relevant information about the
 structure of data and that can be effectively constructed and
 manipulated in practice. Below is an exemple of simplicial complex:
 
-<img src="Images/Pers14.PNG" style="display: block; margin: auto;" />
+![simplicial complex example](Images/Pers14.PNG)
 
 A filtration is an increasing sequence of sub-complexes of a simplicial
 complex $\mathcal{K}$. It can be seen as ordering the simplices included in
@@ -55,7 +55,7 @@ filtered simplicial complexes are encoded through a data structure
 called simplex tree. Vertices are represented as integers, edges as
 pairs of integers, etc.
 
-<img src="https://gudhi.inria.fr/python/latest/_images/Simplex_tree_representation.png" style="display: block; margin: auto;" />
+![simplex tree representation](https://gudhi.inria.fr/python/latest/_images/Simplex_tree_representation.png)
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data
 points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb). In
@@ -85,7 +85,7 @@ TDA signatures can extracted from point clouds but in many cases in data
 sciences the question is to study the topology of the sublevel sets of a
 function.
 
-<img src="Images/sublevf.png" style="display: block; margin: auto;" />
+![function exemple](Images/sublevf.png)
 
 Above is an example for a function defined on a subset of
 $\mathbb{R}$ but in general the function $f$ is defined on a subset of
@@ -115,7 +115,7 @@ simplicial complexes and topological spaces. It encodes the evolution of
 the homology groups of the nested complexes across the scales. The
 diagram below shows several level sets of the filtration:
 
-<img src="Images/pers.png" style="display: block; margin: auto;" />
+![persistence](Images/pers.png)
 
 [Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb)
 In this notebook we show how to compute barcodes and persistence
