@@ -1,5 +1,4 @@
-Tutorials for Topological Data Analysis with the Gudhi Library
-================
+# Tutorials for Topological Data Analysis with the Gudhi Library
 
 Topological Data Analysis (TDA) is a recent and fast growing field
 providing a set of new topological and geometric tools to infer relevant
@@ -22,9 +21,7 @@ install](https://anaconda.org/conda-forge/gudhi).
 ### 01 - Simplex trees and simpicial complexes
 
 TDA typically aims at extracting topological signatures from a point
-cloud in
-![\\mathbb{R}^d](https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5Ed
-"\\mathbb{R}^d") or in a general metric space. By studying the topology
+cloud in $\mathbb{R}^d$ or in a general metric space. By studying the topology
 of a point cloud, we actually mean studying the topology of the unions
 of balls centered at the point cloud, also called *offsets*. However,
 non-discrete sets such as offsets, and also continuous mathematical
@@ -42,16 +39,12 @@ structures that are proven to reflect relevant information about the
 structure of data and that can be effectively constructed and
 manipulated in practice. Below is an exemple of simplicial complex:
 
-<img src="Images/Pers14.PNG" style="display: block; margin: auto;" />
+![simplicial complex example](Images/Pers14.PNG)
 
 A filtration is an increasing sequence of sub-complexes of a simplicial
-complex
-![\\mathcal{K}](https://latex.codecogs.com/png.latex?%5Cmathcal%7BK%7D
-"\\mathcal{K}"). It can be seen as ordering the simplices included in
-the complex
-![\\mathcal{K}](https://latex.codecogs.com/png.latex?%5Cmathcal%7BK%7D
-"\\mathcal{K}"). Indeed, simpicial complexes often come with a specific
-order, as for [Vietoris-Rips
+complex $\mathcal{K}$. It can be seen as ordering the simplices included in
+the complex $\mathcal{K}$. Indeed, simpicial complexes often come with a
+specific order, as for [Vietoris-Rips
 complexes](https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex),
 [Cech complexes](https://en.wikipedia.org/wiki/%C4%8Cech_complex) and
 [alpha
@@ -62,16 +55,15 @@ filtered simplicial complexes are encoded through a data structure
 called simplex tree. Vertices are represented as integers, edges as
 pairs of integers, etc.
 
-<img src="https://gudhi.inria.fr/python/latest/_images/Simplex_tree_representation.png" style="display: block; margin: auto;" />
+![simplex tree representation](Images/Simplex_tree_representation.png)
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data
 points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb). In
 practice, the first step of the **TDA Analysis Pipeline** is to define a
 filtration of simplicial complexes for some data. This notebook explains
 how to build Vietoris-Rips complexes and alpha complexes (represented as
-simplex trees) from data points in
-![\\mathbb{R}^d](https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5Ed
-"\\mathbb{R}^d"), using the simplex tree data structure.
+simplex trees) from data points in $\mathbb{R}^d$, using the simplex tree data
+structure.
 
 
 This [Notebook](Tuto-GUDHI-alpha-complex-visualization.ipynb) shows how to visualize simplicial complexes.
@@ -93,43 +85,29 @@ TDA signatures can extracted from point clouds but in many cases in data
 sciences the question is to study the topology of the sublevel sets of a
 function.
 
-<img src="Images/sublevf.png" style="display: block; margin: auto;" />
+![function exemple](Images/sublevf.png)
 
 Above is an example for a function defined on a subset of
-![\\mathbb{R}](https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D
-"\\mathbb{R}") but in general the function
-![f](https://latex.codecogs.com/png.latex?f "f") is defined on a subset
-of
-![\\mathbb{R}^d](https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5Ed
-"\\mathbb{R}^d").
+$\mathbb{R}$ but in general the function $f$ is defined on a subset of
+$\mathbb{R}^d$.
 
 [Notebook: cubical complexes](Tuto-GUDHI-cubical-complexes.ipynb). One
 first approach for studying the topology of the sublevel sets of a
 function is to define a regular grid on
-![\\mathbb{R}^d](https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5Ed
-"\\mathbb{R}^d") and then to define a filtered complex based on this
-grid and the function ![f](https://latex.codecogs.com/png.latex?f "f").
+$\mathbb{R}^d$ and then to define a filtered complex based on this grid and the
+function $f$.
 
 ### 02 - Persistent homology and persistence diagrams
 
 Homology is a well-known concept in algebraic topology. It provides a
 powerful tool to formalize and handle the notion of topological features
 of a topological space or of a simplicial complex in an algebraic way.
-For any dimension ![k](https://latex.codecogs.com/png.latex?k "k"), the
-![k](https://latex.codecogs.com/png.latex?k "k")-dimensional *holes* are
-represented by a vector space
-![H\_k](https://latex.codecogs.com/png.latex?H_k "H_k"), whose dimension
-is intuitively the number of such independent features. For example, the
-![0](https://latex.codecogs.com/png.latex?0 "0")-dimensional homology
-group ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0") represents
-the connected components of the complex, the
-![1](https://latex.codecogs.com/png.latex?1 "1")-dimensional homology
-group ![H\_1](https://latex.codecogs.com/png.latex?H_1 "H_1") represents
-the ![1](https://latex.codecogs.com/png.latex?1 "1")-dimensional loops,
-the ![2](https://latex.codecogs.com/png.latex?2 "2")-dimensional
-homology group ![H\_2](https://latex.codecogs.com/png.latex?H_2 "H_2")
-represents the ![2](https://latex.codecogs.com/png.latex?2
-"2")-dimensional cavities and so on.
+For any dimension $k$, the $k$-dimensional *holes* are represented by a vector
+space $H\_k$, whose dimension is intuitively the number of such independent
+features. For example, the $0$-dimensional homology group $H\_0$ represents the
+connected components of the complex, the $1$-dimensional homology group $H\_1$
+represents the $1$-dimensional loops, the $2$-dimensional homology group $H\_2$
+represents the $2$-dimensional cavities and so on.
 
 Persistent homology is a powerful tool to compute, study and encode
 efficiently multiscale topological features of nested families of
@@ -137,7 +115,7 @@ simplicial complexes and topological spaces. It encodes the evolution of
 the homology groups of the nested complexes across the scales. The
 diagram below shows several level sets of the filtration:
 
-<img src="Images/pers.png" style="display: block; margin: auto;" />
+![persistence](Images/pers.png)
 
 [Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb)
 In this notebook we show how to compute barcodes and persistence
