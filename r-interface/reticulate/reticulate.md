@@ -13,7 +13,7 @@ Aymeric Stamm
 
 Let us start by loading the
 [**reticulate**](https://rstudio.github.io/reticulate/) package into the
-environment, along with the [tidyverse](https://www.tidyverse.org),
+environment, along with the [**tidyverse**](https://www.tidyverse.org),
 which is a suite of useful packages for data science:
 
 ``` r
@@ -119,8 +119,8 @@ grid.
 
 Python lists are automatically converted into atomic vectors in R.
 Automatic conversions of data types between R and Python languages are
-implemented in reticulate: see
-<https://rstudio.github.io/reticulate/#type-conversions>.
+implemented in [**reticulate**](https://rstudio.github.io/reticulate/):
+see <https://rstudio.github.io/reticulate/#type-conversions>.
 
 ### Sample generation
 

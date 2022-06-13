@@ -1,12 +1,3 @@
-Aymeric Stamm
-
--   <a href="#setup-instructions-for-using-gudhi-from-r"
-    id="toc-setup-instructions-for-using-gudhi-from-r">Setup instructions
-    for using GUDHI from R</a>
-    -   <a href="#the-reticulate-package" id="toc-the-reticulate-package">The
-        <span><strong>reticulate</strong></span> package</a>
-    -   <a href="#bring-gudhi-into-r" id="toc-bring-gudhi-into-r">Bring GUDHI
-        into R</a>
 
 <!-- README.md is generated from README.qmd. Please edit that file -->
 

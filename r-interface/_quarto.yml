@@ -6,12 +6,10 @@ project:
 
 execute:
   freeze: auto
-author: "Aymeric Stamm"
 title-block-banner: true
 editor: visual
 
 toc: true
-number-sections: false
 
 format:
   html: default

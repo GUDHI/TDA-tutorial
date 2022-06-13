@@ -1,5 +1,6 @@
 ---
 format: gfm
+toc: false
 ---
 
 <!-- README.md is generated from README.qmd. Please edit that file -->
@@ -90,3 +91,4 @@ If you want to check your Python configuration, you can do:
 ```{r}
 py_config()
 ```
+
