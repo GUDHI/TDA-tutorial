@@ -3,10 +3,9 @@ Using up-to-date Gudhi library in R
 Aymeric Stamm
 2022-06-13
 
--   <a href="#the-reticulate-package" id="toc-the-reticulate-package"><span
+-   <a href="#initial-setup" id="toc-initial-setup"><span
     class="toc-section-number">1</span> <span
-    class="header-section-number">1</span> The
-    <span><strong>reticulate</strong></span> package</a>
+    class="header-section-number">1</span> Initial setup</a>
 -   <a href="#full-example" id="toc-full-example"><span
     class="toc-section-number">2</span> <span
     class="header-section-number">2</span> Full example</a>
@@ -17,32 +16,14 @@ Aymeric Stamm
         class="toc-section-number">2.2</span> <span
         class="header-section-number">2.2</span> Sample generation</a>
 
-## <span class="header-section-number">1</span> The [**reticulate**](https://rstudio.github.io/reticulate/) package
-
-The [**reticulate**](https://rstudio.github.io/reticulate/) package
-provides a comprehensive set of tools for interoperability between
-Python and R. The package includes facilities for:
-
--   Calling Python from R in a variety of ways including R Markdown,
-    sourcing Python scripts, importing Python modules, and using Python
-    interactively within an R session.
--   Translation between R and Python objects (for example, between R and
-    Pandas data frames, or between R matrices and NumPy arrays).
--   Flexible binding to different versions of Python including virtual
-    environments and Conda environments.
-
-[**reticulate**](https://rstudio.github.io/reticulate/) embeds a Python
-session within your R session, enabling seamless, high-performance
-interoperability. If you are an R developer that uses Python for some of
-your work or a member of data science team that uses both languages,
-[**reticulate**](https://rstudio.github.io/reticulate/) can dramatically
-streamline your workflow.
+## <span class="header-section-number">1</span> Initial setup
 
 Let us start by loading the
 [**reticulate**](https://rstudio.github.io/reticulate/) package into the
 environment, along with a suite of useful packages for data science:
 
 ``` r
+library(reticulate)
 # install.packages("tidyverse")
 library(tidyverse)
 ```
@@ -58,44 +39,9 @@ library(tidyverse)
     ✖ dplyr::filter() masks stats::filter()
     ✖ dplyr::lag()    masks stats::lag()
 
-``` r
-# install.packages("reticulate")
-library(reticulate)
-```
-
-The fastest way to get you set up to use Python from R with
-[**reticulate**](https://rstudio.github.io/reticulate/) is to use the
-`install_python()` and `install_miniconda()` utility functions that are
-included in the [**reticulate**](https://rstudio.github.io/reticulate/)
-package. In details, use something like:
-
-``` r
-version <- "3.9.6"
-install_miniconda()
-conda_create("r-reticulate", python_version = version)
-```
-
-This is a setup that you ought to do only once (unless you want to
-change your Python version for some reason).
-
-Next, you can seamlessly install all the Python packages you need by
-calling the `conda_install()` function. For instance, to use Gudhi, you
-would do something like:
-
-``` r
-conda_install("scikit-learn", envname = "r-reticulate")
-conda_install("gudhi", envname = "r-reticulate")
-conda_install("jupyter", envname = "r-reticulate")
-conda_install("r" , envname = "r-reticulate")
-conda_install("r-irkernel" , envname = "r-reticulate")
-install.packages("IRkernel")
-IRkernel::installspec()
-```
-
-Again, installation of Python packages is to be done only once.
-
-You finally need to tell your R markdown document which conda
-environment to use for interpreting Python code. This is done with:
+Let us inform the R session that we want to use the virtual environment
+`r-reticulate` where we installed all the required Python package (see
+`README` at the root of the project). This is done with:
 
 ``` r
 use_condaenv("r-reticulate")
@@ -179,33 +125,21 @@ grid.
 
 Python lists are automatically converted into atomic vectors in R.
 Automatic conversions of data types between R and Python languages are
-achieved according to the following table:
-
-| R                      | Python            | Examples                                           |
-|------------------------|-------------------|----------------------------------------------------|
-| Single-element vector  | Scalar            | `1`, `1L`, `TRUE`, `"foo"`                         |
-| Multi-element vector   | List              | `c(1.0, 2.0, 3.0)`, `c(1L, 2L, 3L)`                |
-| List of multiple types | Tuple             | `list(1L, TRUE, "foo")`                            |
-| Named list             | Dict              | `list(a = 1L, b = 2.0)`, `dict(x = x_data)`        |
-| Matrix/Array           | NumPy ndarray     | `matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2)`        |
-| Data Frame             | Pandas DataFrame  | `data.frame(x = c(1, 2, 3), y = c("a", "b", "c"))` |
-| Function               | Python function   | `function(x) x + 1`                                |
-| NULL, TRUE, FALSE      | None, True, False | `NULL`, `TRUE`, `FALSE`                            |
+implemented in reticulate: see
+<https://rstudio.github.io/reticulate/#type-conversions>.
 
 ### <span class="header-section-number">2.2</span> Sample generation
 
 Now we can go back in **R** to use this **Python** function and generate
 two samples of silhouette profiles. To access any Python object
 `my_py_object` created in a previous chunk from an R chunk, use
-`py$my_py_object`. Following this logic, the Python
-function`orbit_silhouette()` created in the above Python chunk is
-accessible from any subsequent R chunk as `py$orbit_silhouette()`:
+`py$my_py_object`. Following this logic, the Python function
+`orbit_silhouette()` created in the above Python chunk is accessible
+from any subsequent R chunk as `py$orbit_silhouette()`:
 
 ``` r
 n1 <- 10
 n2 <- 10
-# x1 <- replicate(n1, orbit_silhouette(r = 1.9), simplify = FALSE)
-# x2 <- replicate(n2, orbit_silhouette(r = 2.1), simplify = FALSE)
 x1 <- replicate(n1, py$orbit_silhouette(r = 1.9), simplify = FALSE)
 x2 <- replicate(n2, py$orbit_silhouette(r = 2.1), simplify = FALSE)
 
@@ -232,4 +166,4 @@ df |>
   scale_color_viridis_d()
 ```
 
-![](reticulate_files/figure-gfm/unnamed-chunk-10-1.png)
+![](reticulate_files/figure-gfm/unnamed-chunk-7-1.png)
