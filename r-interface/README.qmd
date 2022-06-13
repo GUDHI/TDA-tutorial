@@ -92,3 +92,51 @@ If you want to check your Python configuration, you can do:
 py_config()
 ```
 
+# Organisation
+
+## File hierarchy
+
+This folder contains a number of [Quarto](https://quarto.org) documents
+contributed with the purpose of showing how
+[`R`](https://www.r-project.org) can be used to enhance statistical
+analysis of topological data produced via
+[Gudhi](https://gudhi.inria.fr). Each tutorial is hosted in its own
+folder which is organised as follows:
+
+-   The Quarto document with extension `.qmd` which is the main file
+    that a developer is supposed to contribute. In this document, there
+    is a YAML header in which the contributor can specify various output
+    formats by adding
+
+    ``` yaml
+    #| eval: false
+    format:
+      html: default
+      gfm: default
+      pdf: default
+    ```
+
+    The complete list of possible output formats:
+    <https://quarto.org/docs/output-formats/all-formats.html>.
+
+-   A Github-flavored markdown (GMF) document with extension `.md` which
+    enables nice visualization of the notebook directly in the Github
+    web interface.
+
+-   A folder containing useful libs and resources to display the GMF
+    document.
+
+## Contributing
+
+If you want to contribute, you should
+
+1.  Fork the `TDA-tutorials` repo
+2.  Open the RStudio project in
+    `TDA-tutorials/r-interface/r-interface.Rproj`.
+3.  When opened in RStudio, the working directory should now be
+    `TDA-tutorials/r-interface/` in which you can now create a folder
+    with evocative name to put the Quarto document describing the
+    analysis you want to share.
+    -   Note: you can use the same YAML header as in
+        `reticulate/reticulate.qmd` as a number of presets for rendering
+        are made into the `_quarto.yml` file.
