@@ -20,7 +20,8 @@ Aymeric Stamm
 
 Let us start by loading the
 [**reticulate**](https://rstudio.github.io/reticulate/) package into the
-environment, along with a suite of useful packages for data science:
+environment, along with the [tidyverse](https://www.tidyverse.org),
+which is a suite of useful packages for data science:
 
 ``` r
 library(reticulate)
@@ -40,7 +41,7 @@ library(tidyverse)
     ✖ dplyr::lag()    masks stats::lag()
 
 Let us inform the R session that we want to use the virtual environment
-`r-reticulate` where we installed all the required Python package (see
+`r-reticulate` where we installed all the required Python packages (see
 `README` at the root of the project). This is done with:
 
 ``` r

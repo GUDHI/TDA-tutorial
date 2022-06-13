@@ -1,12 +1,26 @@
+Aymeric Stamm
+
+-   <a href="#setup-instructions-for-using-gudhi-from-r"
+    id="toc-setup-instructions-for-using-gudhi-from-r"><span
+    class="toc-section-number">1</span> <span
+    class="header-section-number">1</span>. Setup instructions for using
+    GUDHI from R</a>
+    -   <a href="#the-reticulate-package" id="toc-the-reticulate-package"><span
+        class="toc-section-number">1.1</span> <span
+        class="header-section-number">1.1</span> The
+        <span><strong>reticulate</strong></span> package</a>
+    -   <a href="#bring-gudhi-into-r" id="toc-bring-gudhi-into-r"><span
+        class="toc-section-number">1.2</span> <span
+        class="header-section-number">1.2</span> Bring GUDHI into R</a>
 
 <!-- README.md is generated from README.qmd. Please edit that file -->
 
-# Setup instructions for using GUDHI from R
+# <span class="header-section-number">1</span>. Setup instructions for using GUDHI from R
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-## The [**reticulate**](https://rstudio.github.io/reticulate/) package
+## <span class="header-section-number">1.1</span> The [**reticulate**](https://rstudio.github.io/reticulate/) package
 
 The [**reticulate**](https://rstudio.github.io/reticulate/) package
 provides a comprehensive set of tools for interoperability between
@@ -27,10 +41,10 @@ your work or a member of data science team that uses both languages,
 [**reticulate**](https://rstudio.github.io/reticulate/) can dramatically
 streamline your workflow.
 
-## Bring GUDHI into R
+## <span class="header-section-number">1.2</span> Bring GUDHI into R
 
 -   First, you’ll want to install and load the
-    [**reticulate**](https://rstudio.github.io/reticulate/)package into
+    [**reticulate**](https://rstudio.github.io/reticulate/) package into
     your session:
 
     ``` r
@@ -45,8 +59,15 @@ streamline your workflow.
     details, use something like:
 
     ``` r
-    version <- "3.9.6"
     install_miniconda()
+    ```
+
+-   Next, it is recommended that you create a virtual conda environment
+    in which you’ll install all required Python packages. This can be
+    achieved using the `reticulate::conda_create()` function as follows:
+
+    ``` r
+    version <- "3.9.6"
     conda_create("r-reticulate", python_version = version)
     ```
 

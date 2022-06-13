@@ -1,6 +1,11 @@
 project:
   title: "r-interface"
+  render:
+    - "README.qmd"
+    - "*.qmd"
 
+execute:
+  freeze: auto
 author: "Aymeric Stamm"
 title-block-banner: true
 editor: visual

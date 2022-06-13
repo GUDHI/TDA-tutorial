@@ -43,7 +43,7 @@ streamline your workflow.
 ## Bring GUDHI into R
 
 -   First, you'll want to install and load the
-    [**reticulate**](https://rstudio.github.io/reticulate/)package into
+    [**reticulate**](https://rstudio.github.io/reticulate/) package into
     your session:
 
     ```{r}
@@ -59,8 +59,16 @@ streamline your workflow.
 
     ```{r}
     #| eval: false
-    version <- "3.9.6"
     install_miniconda()
+    ```
+
+-   Next, it is recommended that you create a virtual conda environment
+    in which you'll install all required Python packages. This can be
+    achieved using the `reticulate::conda_create()` function as follows:
+
+    ```{r}
+    #| eval: false
+    version <- "3.9.6"
     conda_create("r-reticulate", python_version = version)
     ```
 
