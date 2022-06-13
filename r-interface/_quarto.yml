@@ -11,7 +11,7 @@ title-block-banner: true
 editor: visual
 
 toc: true
-number-sections: true
+number-sections: false
 
 format:
   html: default

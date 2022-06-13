@@ -3,20 +3,13 @@ Using up-to-date Gudhi library in R
 Aymeric Stamm
 2022-06-13
 
--   <a href="#initial-setup" id="toc-initial-setup"><span
-    class="toc-section-number">1</span> <span
-    class="header-section-number">1</span> Initial setup</a>
--   <a href="#full-example" id="toc-full-example"><span
-    class="toc-section-number">2</span> <span
-    class="header-section-number">2</span> Full example</a>
-    -   <a href="#data-model" id="toc-data-model"><span
-        class="toc-section-number">2.1</span> <span
-        class="header-section-number">2.1</span> Data model</a>
-    -   <a href="#sample-generation" id="toc-sample-generation"><span
-        class="toc-section-number">2.2</span> <span
-        class="header-section-number">2.2</span> Sample generation</a>
+-   <a href="#initial-setup" id="toc-initial-setup">Initial setup</a>
+-   <a href="#full-example" id="toc-full-example">Full example</a>
+    -   <a href="#data-model" id="toc-data-model">Data model</a>
+    -   <a href="#sample-generation" id="toc-sample-generation">Sample
+        generation</a>
 
-## <span class="header-section-number">1</span> Initial setup
+## Initial setup
 
 Let us start by loading the
 [**reticulate**](https://rstudio.github.io/reticulate/) package into the
@@ -78,9 +71,9 @@ import gudhi as gd
 import gudhi.representations
 ```
 
-## <span class="header-section-number">2</span> Full example
+## Full example
 
-### <span class="header-section-number">2.1</span> Data model
+### Data model
 
 First, we will generate persistence diagrams with orbits of dynamical
 systems. This data set is very common in TDA. We use the following
@@ -129,7 +122,7 @@ Automatic conversions of data types between R and Python languages are
 implemented in reticulate: see
 <https://rstudio.github.io/reticulate/#type-conversions>.
 
-### <span class="header-section-number">2.2</span> Sample generation
+### Sample generation
 
 Now we can go back in **R** to use this **Python** function and generate
 two samples of silhouette profiles. To access any Python object

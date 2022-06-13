@@ -1,26 +1,21 @@
 Aymeric Stamm
 
 -   <a href="#setup-instructions-for-using-gudhi-from-r"
-    id="toc-setup-instructions-for-using-gudhi-from-r"><span
-    class="toc-section-number">1</span> <span
-    class="header-section-number">1</span>. Setup instructions for using
-    GUDHI from R</a>
-    -   <a href="#the-reticulate-package" id="toc-the-reticulate-package"><span
-        class="toc-section-number">1.1</span> <span
-        class="header-section-number">1.1</span> The
+    id="toc-setup-instructions-for-using-gudhi-from-r">Setup instructions
+    for using GUDHI from R</a>
+    -   <a href="#the-reticulate-package" id="toc-the-reticulate-package">The
         <span><strong>reticulate</strong></span> package</a>
-    -   <a href="#bring-gudhi-into-r" id="toc-bring-gudhi-into-r"><span
-        class="toc-section-number">1.2</span> <span
-        class="header-section-number">1.2</span> Bring GUDHI into R</a>
+    -   <a href="#bring-gudhi-into-r" id="toc-bring-gudhi-into-r">Bring GUDHI
+        into R</a>
 
 <!-- README.md is generated from README.qmd. Please edit that file -->
 
-# <span class="header-section-number">1</span>. Setup instructions for using GUDHI from R
+# Setup instructions for using GUDHI from R
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-## <span class="header-section-number">1.1</span> The [**reticulate**](https://rstudio.github.io/reticulate/) package
+## The [**reticulate**](https://rstudio.github.io/reticulate/) package
 
 The [**reticulate**](https://rstudio.github.io/reticulate/) package
 provides a comprehensive set of tools for interoperability between
@@ -41,7 +36,7 @@ your work or a member of data science team that uses both languages,
 [**reticulate**](https://rstudio.github.io/reticulate/) can dramatically
 streamline your workflow.
 
-## <span class="header-section-number">1.2</span> Bring GUDHI into R
+## Bring GUDHI into R
 
 -   First, you’ll want to install and load the
     [**reticulate**](https://rstudio.github.io/reticulate/) package into
