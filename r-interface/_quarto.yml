@@ -1,0 +1,13 @@
+project:
+  title: "r-interface"
+
+author: "Aymeric Stamm"
+title-block-banner: true
+editor: visual
+
+toc: true
+number-sections: true
+
+format:
+  html: default
+  gfm: default
