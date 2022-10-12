@@ -117,7 +117,7 @@ diagram below shows several level sets of the filtration:
 
 ![persistence](Images/pers.png)
 
-[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb)
+[Notebook: persistence diagrams](https://github.com/GUDHI/TDA-tutorial/blob/master/Tuto-GUDHI-persistence-diagrams.ipynb)
 In this notebook we show how to compute barcodes and persistence
 diagrams from a filtration defined on the Protein binding dataset. This
 tutorial also introduces the bottleneck distance between persistence
