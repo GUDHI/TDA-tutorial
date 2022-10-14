@@ -58,8 +58,8 @@ pairs of integers, etc.
 ![simplex tree representation](Images/Simplex_tree_representation.png)
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data
-points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb). In
-practice, the first step of the **TDA Analysis Pipeline** is to define a
+points](https://github.com/GUDHI/TDA-tutorial/blob/master/Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb).
+In practice, the first step of the **TDA Analysis Pipeline** is to define a
 filtration of simplicial complexes for some data. This notebook explains
 how to build Vietoris-Rips complexes and alpha complexes (represented as
 simplex trees) from data points in $\mathbb{R}^d$, using the simplex tree data
@@ -117,7 +117,7 @@ diagram below shows several level sets of the filtration:
 
 ![persistence](Images/pers.png)
 
-[Notebook: persistence diagrams](Tuto-GUDHI-persistence-diagrams.ipynb)
+[Notebook: persistence diagrams](https://github.com/GUDHI/TDA-tutorial/blob/master/Tuto-GUDHI-persistence-diagrams.ipynb)
 In this notebook we show how to compute barcodes and persistence
 diagrams from a filtration defined on the Protein binding dataset. This
 tutorial also introduces the bottleneck distance between persistence
