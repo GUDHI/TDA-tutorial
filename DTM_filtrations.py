@@ -273,7 +273,7 @@ def SampleOnNecklace(N_obs = 100, N_out = 0, is_plot = False):
     data = np.concatenate((data_obs, data_out))
 
     if is_plot:
-        fig = plt.figure(); ax = fig.gca(projection='3d')
+        ax = plt.figure().add_subplot(projection="3d")
         plt_obs = ax.scatter(data_obs[:,0], data_obs[:,1], data_obs[:,2], c='tab:cyan')
         plt_out = ax.scatter(X_out, Y_out, Z_out, c='tab:orange')
         ax.set_title(str(4*N_obs)+'-sampling of the necklace with '+str(N_out)+' outliers')
