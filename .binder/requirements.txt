@@ -10,4 +10,5 @@ pot
 networkx
 gudhi
 torch
+tqdm
 eagerpy
