@@ -167,7 +167,7 @@ Two libraries related to Gudhi:
     tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).
   - [Perslay](https://github.com/MathieuCarriere/perslay): A Simple and
     Versatile Neural Network Layer for Persistence Diagrams. See [this
-    tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial).
+    notebook](Tuto-GUDHI-perslay-visu.ipynb).
 
 ### 07 - Alternative filtrations and robust TDA
 
@@ -220,8 +220,7 @@ points](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 [ATOL
 tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb)
 
-[Perslay
-tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial)
+[Perslay](Tuto-GUDHI-perslay-visu.ipynb)
 
 [DTM-filtrations](Tuto-GUDHI-DTM-filtrations.ipynb)
 
