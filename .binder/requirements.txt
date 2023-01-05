@@ -8,7 +8,7 @@ tensorflow-addons
 plotly
 pot
 networkx
-gudhi
+gudhi!=3.7.0 # cf. https://github.com/GUDHI/TDA-tutorial/issues/65
 torch
 tqdm
 eagerpy
