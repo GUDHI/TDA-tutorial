@@ -85,7 +85,7 @@ C. Oballe and V. Maroulas provide a [tutorial](https://github.com/coballejr/misc
 Two libraries related to Gudhi:  
 
 - [ATOL](https://github.com/martinroyer/atol): Automatic Topologically-Oriented Learning. See [this tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).
-- [Perslay](https://github.com/MathieuCarriere/perslay): A Simple and Versatile Neural Network Layer for Persistence Diagrams. See [this tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial).
+- [Perslay](https://github.com/MathieuCarriere/perslay): A Simple and Versatile Neural Network Layer for Persistence Diagrams. See [notebook](Tuto-GUDHI-perslay-visu.ipynb).
 
 ### 07 - Alternative filtrations and robust TDA
 
@@ -123,7 +123,7 @@ In this [notebook](Tuto-GUDHI-optimization.ipynb), we will see how Gudhi and Ten
 
 [ATOL tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb)
 
-[Perslay tutorial](https://github.com/MathieuCarriere/perslay/tree/master/tutorial)
+[Perslay](Tuto-GUDHI-perslay-visu.ipynb)
 
 [DTM-filtrations](Tuto-GUDHI-DTM-filtrations.ipynb)
 
