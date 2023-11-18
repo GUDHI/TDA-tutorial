@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import argparse
-from gudhi.cover_complex import save_to_html_
+from gudhi.cover_complex import _save_to_html
 
 """This file is part of the Gudhi Library - https://gudhi.inria.fr/ - which is released under MIT.
     See file LICENSE or go to https://gudhi.inria.fr/licensing/ for full license details.
@@ -40,4 +40,4 @@ with open(args.file, 'r') as f:
 
     f.close()
 
-save_to_html_(dat, lens, color, param, nums, points, edges, html_output_filename)
+_save_to_html(dat, lens, color, param, nums, points, edges, html_output_filename)
