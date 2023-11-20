@@ -40,4 +40,4 @@ with open(args.file, 'r') as f:
 
     f.close()
 
-_save_to_html(dat, lens, color, param, nums, points, edges, html_output_filename)
+_save_to_html(dat, lens, color, param, points, edges, html_output_filename)
