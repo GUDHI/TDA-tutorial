@@ -1,0 +1,142 @@
+---
+format: gfm
+toc: false
+---
+
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+```{r}
+#| label: setup
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Setup instructions for using GUDHI from R
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+## The [**reticulate**](https://rstudio.github.io/reticulate/) package
+
+The [**reticulate**](https://rstudio.github.io/reticulate/) package
+provides a comprehensive set of tools for interoperability between
+Python and R. The package includes facilities for:
+
+-   Calling Python from R in a variety of ways including R Markdown,
+    sourcing Python scripts, importing Python modules, and using Python
+    interactively within an R session.
+-   Translation between R and Python objects (for example, between R and
+    Pandas data frames, or between R matrices and NumPy arrays).
+-   Flexible binding to different versions of Python including virtual
+    environments and Conda environments.
+
+[**reticulate**](https://rstudio.github.io/reticulate/) embeds a Python
+session within your R session, enabling seamless, high-performance
+interoperability. If you are an R developer that uses Python for some of
+your work or a member of data science team that uses both languages,
+[**reticulate**](https://rstudio.github.io/reticulate/) can dramatically
+streamline your workflow.
+
+## Bring GUDHI into R
+
+-   First, you'll want to install and load the
+    [**reticulate**](https://rstudio.github.io/reticulate/) package into
+    your session:
+
+    ```{r}
+    # install.packages("reticulate")
+    library(reticulate)
+    ```
+
+-   Next, the fastest way to get you set up to use Python from R with
+    [**reticulate**](https://rstudio.github.io/reticulate/) is to use
+    the `install_miniconda()` utility function which is included in the
+    [**reticulate**](https://rstudio.github.io/reticulate/) package. In
+    details, use something like:
+
+    ```{r}
+    #| eval: false
+    install_miniconda()
+    ```
+
+-   Next, it is recommended that you create a virtual conda environment
+    in which you'll install all required Python packages. This can be
+    achieved using the `reticulate::conda_create()` function as follows:
+
+    ```{r}
+    #| eval: false
+    version <- "3.9.6"
+    conda_create("r-reticulate", python_version = version)
+    ```
+
+-   Next, you can seamlessly install all the Python packages you need by
+    calling the `conda_install()` function. For instance, to use Gudhi,
+    you would do something like:
+
+    ```{r}
+    #| eval: false
+    conda_install("scikit-learn", envname = "r-reticulate")
+    conda_install("gudhi", envname = "r-reticulate")
+    ```
+
+This is a setup that you ought to do only once (unless you want to
+change your Python version for some reason).
+
+If you want to check your Python configuration, you can do:
+
+```{r}
+py_config()
+```
+
+# Organisation
+
+## File hierarchy
+
+This folder contains a number of [Quarto](https://quarto.org) documents
+contributed with the purpose of showing how
+[`R`](https://www.r-project.org) can be used to enhance statistical
+analysis of topological data produced via
+[Gudhi](https://gudhi.inria.fr). Each tutorial is hosted in its own
+folder which is organised as follows:
+
+-   The Quarto document with extension `.qmd` which is the main file
+    that a developer is supposed to contribute. In this document, there
+    is a YAML header in which the contributor can specify various output
+    formats by adding
+
+    ``` yaml
+    #| eval: false
+    format:
+      html: default
+      gfm: default
+      pdf: default
+    ```
+
+    The complete list of possible output formats:
+    <https://quarto.org/docs/output-formats/all-formats.html>.
+
+-   A Github-flavored markdown (GMF) document with extension `.md` which
+    enables nice visualization of the notebook directly in the Github
+    web interface.
+
+-   A folder containing useful libs and resources to display the GMF
+    document.
+
+## Contributing
+
+If you want to contribute, you should
+
+1.  Fork the `TDA-tutorials` repo
+2.  Open the RStudio project in
+    `TDA-tutorials/r-interface/r-interface.Rproj`.
+3.  When opened in RStudio, the working directory should now be
+    `TDA-tutorials/r-interface/` in which you can now create a folder
+    with evocative name to put the Quarto document describing the
+    analysis you want to share.
+    -   Note: you can use the same YAML header as in
+        `reticulate/reticulate.qmd` as a number of presets for rendering
+        are made into the `_quarto.yml` file.
