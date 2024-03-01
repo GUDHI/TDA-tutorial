@@ -158,9 +158,9 @@ def AlphaDTMFiltration(X, m, p, dimension_max =2, filtration_max = np.inf):
     N_tot = X.shape[0]     
     alpha_complex = gudhi.AlphaComplex(points=X)
     st_alpha = alpha_complex.create_simplex_tree()    
-    Y = np.array([alpha_complex.get_point(i) for i in range(N_tot)])
+    Y = X
     distances = euclidean_distances(Y)             #computes the pairwise distances
-    DTM_values = DTM(X,Y,m)                        #/!\ in 3D, gudhi.AlphaComplex may change the ordering of the points
+    DTM_values = DTM(X,Y,m)
     
     st = gudhi.SimplexTree()                       #creates an empty simplex tree
     for simplex in st_alpha.get_skeleton(2):       #adds vertices with corresponding filtration value
