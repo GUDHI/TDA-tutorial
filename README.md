@@ -156,7 +156,7 @@ C. Oballe and V. Maroulas provide a
 [tutorial](https://github.com/coballejr/misc/blob/master/Tuto-GUDHI-bayes-tda.ipynb)
 for a Python module that implements the model for Bayesian inference
 with persistence diagrams introduced in their
-[paper](https://epubs.siam.org/doi/pdf/10.1137/19M1268719).
+[paper](https://epubs.siam.org/doi/abs/10.1137/19M1268719).
 
 ### 06 - Machine learning and deep learning with TDA
 
