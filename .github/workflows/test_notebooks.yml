@@ -22,4 +22,4 @@ jobs:
           pip install jupyter
       - name: Execute notebooks
         run: |
-          for f in *.ipynb; do echo "Processing $f file.."; time jupyter nbconvert --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $f;done;
+          for f in *.ipynb; do echo "Processing $f file.."; time jupyter nbconvert --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags="['do_not_execute']" --to notebook  --ExecutePreprocessor.timeout=600 --inplace --execute $f;done;
