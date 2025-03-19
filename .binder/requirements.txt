@@ -12,3 +12,5 @@ gudhi>=3.9.0 # Tuto-GUDHI-cover-complex.ipynb requires sklearn interfaces
 torch
 tqdm
 eagerpy
+ipywidgets
+anywidget
