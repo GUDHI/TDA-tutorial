@@ -13,3 +13,4 @@ torch
 tqdm
 eagerpy
 ipywidgets
+anywidget
