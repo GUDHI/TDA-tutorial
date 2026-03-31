@@ -1,0 +1,16 @@
+project:
+  title: "r-interface"
+  render:
+    - "README.qmd"
+    - "*.qmd"
+
+execute:
+  freeze: auto
+title-block-banner: true
+editor: visual
+
+toc: true
+
+format:
+  html: default
+  gfm: default
