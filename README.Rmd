@@ -86,6 +86,7 @@ Two libraries related to Gudhi:
 
 - [ATOL](https://github.com/martinroyer/atol): Automatic Topologically-Oriented Learning. See [this tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).
 - [Perslay](https://github.com/MathieuCarriere/perslay): A Simple and Versatile Neural Network Layer for Persistence Diagrams. See [notebook](Tuto-GUDHI-perslay-visu.ipynb).
+- RipsNet: based on a Deep Sets architecture, this Tensorflow model is a fast and robust estimation of persistent homology of point clouds. See [notebook](Tuto-GUDHI-ripsnet.ipynb).
 
 ### 07 - Alternative filtrations and robust TDA
 

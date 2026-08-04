@@ -168,6 +168,8 @@ Two libraries related to Gudhi:
   - [Perslay](https://github.com/MathieuCarriere/perslay): A Simple and
     Versatile Neural Network Layer for Persistence Diagrams. See [this
     notebook](tutorials/Tuto-GUDHI-perslay-visu.ipynb).
+  - RipsNet: based on a Deep Sets architecture, this Tensorflow model is a fast and robust estimation of persistent
+    homology of point clouds. See [this notebook](tutorials/Tuto-GUDHI-ripsnet.ipynb).
 
 ### 07 - Alternative filtrations and robust TDA
 

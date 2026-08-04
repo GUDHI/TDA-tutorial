@@ -14,3 +14,4 @@ tqdm
 eagerpy
 ipywidgets
 anywidget
+xgboost
